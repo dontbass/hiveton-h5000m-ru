@@ -11,6 +11,8 @@ scp -O luci-i18n-*-ru_*.ipk root@192.168.88.1:/tmp/
 ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk'
 ```
 
+**После установки сбросьте кэш браузера** (Chromium: F12 → правой кнопкой по «Обновить» → «Очистка кэша и жёсткая перезагрузка»; Firefox: Ctrl+Shift+R), отдельно для LuCI и для панели :8001.
+
 Подробности — в [README](https://github.com/dontbass/hiveton-h5000m-ru#readme).
 
 **v1.2.0:** новый пакет `luci-i18n-overlay-ru` — заставка при бездействии, системные оповещения и страница *Система → Заставка*.
