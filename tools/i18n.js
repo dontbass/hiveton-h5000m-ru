@@ -91,7 +91,8 @@ if (cmd === 'extract') {
   const src = origBuf.toString('utf8');
   if (Buffer.compare(Buffer.from(src, 'utf8'), origBuf) !== 0) throw new Error('not clean utf8');
   const reps = [];
-  for (const it of collect(src)) {
+  const isJs = target.endsWith('.js');
+  for (const it of (isJs ? collect(src) : [])) {
     const tr = dict[it.value];
     if (tr === undefined || tr === null) continue;
     if (it.kind === 'lit') reps.push([it.start, it.end, it.quote + esc(tr, it.quote) + it.quote]);
@@ -115,7 +116,7 @@ if (cmd === 'extract') {
     out += pre + n; last = e;
   }
   out += src.slice(last);
-  parse(out);
+  if (isJs) parse(out);
   const md5 = b => crypto.createHash('md5').update(b).digest('hex');
   const res = { target, orig_md5: md5(origBuf), orig_size: origBuf.length, new_md5: md5(Buffer.from(out, 'utf8')), ops };
   fs.writeFileSync(outFile, JSON.stringify(res));

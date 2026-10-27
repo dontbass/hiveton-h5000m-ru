@@ -3,6 +3,7 @@
 # usage: tools/mkpatches.sh <dump-root>
 #   <dump-root> must contain the original files at their router paths, e.g.
 #   <dump-root>/www/webui/webui000/web/*.js
+#   <dump-root>/www/webui/webui000/web/scripts/loading.js
 #   <dump-root>/www/luci-static/quickstart/index.js
 # On the router:  tar czf /tmp/src.tar.gz /www/webui/webui000/web /www/luci-static/quickstart
 set -e
@@ -20,6 +21,10 @@ for f in "$D"/www/webui/webui000/web/*.js; do
   node tools/i18n.js mkpatch translations/modemwebui/dict.json "$f" \
     "/www/webui/webui000/web/$b" "patches/modemwebui/$b.json"
 done
+echo '{}' > /tmp/empty-dict.json
+node tools/i18n.js mkpatch /tmp/empty-dict.json "$D/www/webui/webui000/web/scripts/loading.js" \
+  /www/webui/webui000/web/scripts/loading.js patches/modemwebui/scripts_loading.js.json \
+  translations/modemwebui/loading.json
 # drop empty patches
 for p in patches/*/*.json; do
   grep -q '"ops":\[\]' "$p" && rm -f "$p"
