@@ -76,6 +76,13 @@ def main():
         'Russian translation for Modem WebUI (port 8001, Quectel/FM350 webui000)',
         overlay_files(name, 'patches/modemwebui'), overlay_scripts(name)))
 
+    # 4. Screensaver / system alerts overlay (luci-overlay + system-monitor)
+    name = 'luci-i18n-overlay-ru'
+    built.append(mkipk.build(
+        a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
+        'Russian translation for the LuCI screensaver / system alerts overlay',
+        overlay_files(name, 'patches/overlay'), overlay_scripts(name)))
+
     for b in built:
         print(b)
 

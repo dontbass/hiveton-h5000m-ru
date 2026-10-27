@@ -9,8 +9,11 @@
 | `luci-i18n-modemwebui-ru` | Панель модема на порту `:8001` (Modem WebUI, «Powered by @Snowflakes»): экран загрузки, меню, обзор, сеть, дозвон, APN/PDP, SIM/PIN, привязка к диапазонам и сотам, SMS, AT-терминал, температура модуля, встроенные тексты Ant Design |
 | `luci-i18n-quickstart-ru` | Главная страница LuCI — QuickStart (iStoreOS): карточки, мастера, тест скорости, Wi-Fi, NAS/RAID |
 | `luci-i18n-qmodem-next-ru` | Раздел **Modem** в меню LuCI (QModem Next 3.0.0) |
+| `luci-i18n-overlay-ru` | Заставка при бездействии (часы, CPU, память, диск, модем), всплывающие системные оповещения от `system-monitor` и страница настроек *Система → Заставка* |
 
 ![Обзор](docs/modemwebui-dashboard.png)
+
+![Заставка](docs/screensaver.png)
 
 ## Установка
 
@@ -25,8 +28,8 @@ ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i1
 
 ```sh
 cd /tmp
-for p in modemwebui-ru_1.2.2 quickstart-ru_1.01.2 qmodem-next-ru_3.0.0; do
-  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-2_all.ipk"
+for p in modemwebui-ru_1.2.2 quickstart-ru_1.01.2 qmodem-next-ru_3.0.0 overlay-ru_1.0.0; do
+  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-3_all.ipk"
 done
 opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 ```
@@ -37,7 +40,7 @@ opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 Удаление (оригинальные файлы восстанавливаются автоматически):
 
 ```sh
-opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru
+opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru luci-i18n-overlay-ru
 ```
 
 ## Как это работает
@@ -84,6 +87,9 @@ translations/
   quickstart/hardcoded.json    строки, вшитые в index.js
   quickstart/raw.json          мелкие правки шаблонных строк (пробелы)
   modemwebui/dict.json         китайский → русский для Modem WebUI (null = не трогать)
+  modemwebui/loading.json      экран загрузки Modem WebUI
+  overlay/                     заставка: словарь JS, правки страницы настроек и контроллера;
+                               js-raw.json встраивает перевод сообщений system-monitor на лету
 patches/                       сгенерированные байтовые патчи
 files/ru-patch.uc              применение/откат патчей на роутере
 tools/
