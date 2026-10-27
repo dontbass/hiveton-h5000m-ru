@@ -1,0 +1,2129 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: luci-app-qmodem-next\n"
+"Language: ru\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid "$key"
+msgstr "$key"
+
+msgid "16-bit (Unicode)"
+msgstr "16 бит (Unicode)"
+
+msgid "5G Ethernet Interface"
+msgstr "Ethernet-интерфейс 5G"
+
+msgid "7-bit (ASCII)"
+msgstr "7 бит (ASCII)"
+
+msgid "APN"
+msgstr "APN"
+
+msgid "ARFCN"
+msgstr "ARFCN"
+
+msgid "AT Command"
+msgstr "AT-команда"
+
+msgid "AT Debug"
+msgstr "Отладка AT"
+
+msgid "AT Port"
+msgstr "AT-порт"
+
+msgid "Absolute Radio Frequency Channel Number"
+msgstr "Абсолютный номер радиочастотного канала"
+
+msgid "Absolute Radio-Frequency Channel Number"
+msgstr "Абсолютный номер радиочастотного канала"
+
+msgid "Access Maximum Bit Rate for Downlink"
+msgstr "Макс. скорость доступа (downlink)"
+
+msgid "Access Maximum Bit Rate for Uplink"
+msgstr "Макс. скорость доступа (uplink)"
+
+msgid "Action"
+msgstr "Действие"
+
+msgid "Adjust received messages for local timezone (UTC+8)"
+msgstr "Корректировать время входящих под местный часовой пояс (UTC+8)"
+
+msgid "Adjust sent messages for local timezone (UTC+8)"
+msgstr "Корректировать время исходящих под местный часовой пояс (UTC+8)"
+
+msgid "Advanced Configuration"
+msgstr "Расширенная настройка"
+
+msgid ""
+"After setting this option, the first module loaded into this slot will "
+"automatically be assigned this default alias."
+msgstr ""
+"Первому модулю, установленному в этот слот, будет автоматически присвоен "
+"этот псевдоним по умолчанию."
+
+msgid "Alias"
+msgstr "Псевдоним"
+
+msgid "Alternative AT Tools"
+msgstr "Альтернативные AT-инструменты"
+
+msgid "Apply"
+msgstr "Применить"
+
+msgid "Applying..."
+msgstr "Применение..."
+
+msgid ""
+"Are you sure you want to change the IMEI to %s? This requires modem reboot."
+msgstr "Изменить IMEI на %s? Потребуется перезагрузка модема."
+
+msgid "Are you sure you want to clear the dial log?"
+msgstr "Очистить журнал дозвона?"
+
+msgid ""
+"Are you sure you want to perform a hard reboot? This will power cycle the "
+"modem and may cause a longer disconnection."
+msgstr ""
+"Выполнить жёсткую перезагрузку? Питание модема будет отключено и включено "
+"снова, связь может пропасть надолго."
+
+msgid ""
+"Are you sure you want to perform a soft reboot? The modem will restart and "
+"may lose connection temporarily."
+msgstr ""
+"Выполнить мягкую перезагрузку? Модем перезапустится, связь может временно "
+"пропасть."
+
+msgid "Associated USB"
+msgstr "Связанный USB"
+
+msgid "Attempt to use pre-configured PCIe settings from the CPE vendor."
+msgstr "Попробовать заводские настройки PCIe от производителя CPE."
+
+msgid "Attempt to use pre-configured USB settings from the CPE vendor."
+msgstr "Попробовать заводские настройки USB от производителя CPE."
+
+msgid "Auto Delete from SIM"
+msgstr "Автоудаление с SIM"
+
+msgid "Automatically delete SMS from SIM card after reading"
+msgstr "Автоматически удалять SMS с SIM-карты после прочтения"
+
+msgid "Available AT Ports"
+msgstr "Доступные AT-порты"
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Band"
+msgstr "Диапазон"
+
+msgid "Band is required for NR"
+msgstr "Для NR требуется диапазон"
+
+msgid "Bandwidth"
+msgstr "Полоса"
+
+msgid "Block Auto Probe/Remove"
+msgstr "Блокировать автообнаружение/удаление"
+
+msgid "Cancel"
+msgstr "Отмена"
+
+msgid "Carrier"
+msgstr "Оператор"
+
+msgid "Cell ID"
+msgstr "Cell ID"
+
+msgid "Cell Information"
+msgstr "Информация о соте"
+
+msgid "Cell is unlocked (no lock active)"
+msgstr "Сота не закреплена (привязка не активна)"
+
+msgid "Cell parameters copied to settings"
+msgstr "Параметры соты скопированы в настройки"
+
+msgid "Changing IMEI may be illegal in some countries. Use at your own risk."
+msgstr ""
+"Смена IMEI может быть незаконной в некоторых странах. Используйте на свой "
+"риск."
+
+msgid "Channel Quality Indicator"
+msgstr "Индикатор качества канала"
+
+msgid "Channel Quality Indicator for Downlink"
+msgstr "Индикатор качества канала (downlink)"
+
+msgid "Channel Quality Indicator for Uplink"
+msgstr "Индикатор качества канала (uplink)"
+
+msgid "Clear"
+msgstr "Очистить"
+
+msgid "Clear Dial Log"
+msgstr "Очистить журнал дозвона"
+
+msgid "Click \"Scan Neighbor Cells\" to search for nearby cell towers"
+msgstr ""
+"Нажмите «Сканировать соседние соты», чтобы найти ближайшие базовые станции"
+
+msgid "Click \"Send AT Command\" to execute"
+msgstr "Нажмите «Отправить AT-команду» для выполнения"
+
+msgid "Close"
+msgstr "Закрыть"
+
+msgid "Compression Mode"
+msgstr "Режим сжатия"
+
+msgid "Configuration inputs not found"
+msgstr "Поля конфигурации не найдены"
+
+msgid "Configuration saved"
+msgstr "Конфигурация сохранена"
+
+msgid ""
+"Configure cell lock parameters. You can manually enter values or use the "
+"\"Copy\" button from scanned cells."
+msgstr ""
+"Настройте параметры привязки к соте. Значения можно ввести вручную или "
+"нажать «Копировать» у найденной соты."
+
+msgid ""
+"Configure network preference (5G/4G/3G priority). Changes may require modem "
+"restart."
+msgstr ""
+"Настройка приоритета сетей (5G/4G/3G). Может потребоваться перезагрузка "
+"модема."
+
+msgid "Configure physical slots for modem installation"
+msgstr "Настройка физических слотов для установки модема"
+
+msgid ""
+"Configure the modem dial mode (QMI/MBIM/ECM/NCM, etc.). Changes require "
+"modem reboot to take effect."
+msgstr ""
+"Режим подключения модема (QMI/MBIM/ECM/NCM и др.). Изменения вступят в силу "
+"после перезагрузки модема."
+
+msgid "Configured Ports"
+msgstr "Настроенные порты"
+
+msgid "Confirm"
+msgstr "Подтвердить"
+
+msgid "Connect Status"
+msgstr "Статус подключения"
+
+msgid "Connected"
+msgstr "Подключено"
+
+msgid "Contact"
+msgstr "Контакт"
+
+msgid "Control"
+msgstr "Управление"
+
+msgid "Conversation with "
+msgstr "Переписка с "
+
+msgid "Conversations"
+msgstr "Переписки"
+
+msgid "Copy"
+msgstr "Копировать"
+
+msgid "Count"
+msgstr "Количество"
+
+msgid "Current IMEI"
+msgstr "Текущий IMEI"
+
+msgid "Current Mode"
+msgstr "Текущий режим"
+
+msgid "Current Port"
+msgstr "Текущий порт"
+
+msgid "Current Preference"
+msgstr "Текущий приоритет"
+
+msgid "DL"
+msgstr "DL"
+
+msgid "DL Bandwidth"
+msgstr "Полоса DL"
+
+msgid "DL/UL MOD"
+msgstr "Модуляция DL/UL"
+
+msgid "Default Alias"
+msgstr "Псевдоним по умолчанию"
+
+msgid "Default Metric"
+msgstr "Метрика по умолчанию"
+
+msgid "Delay Start"
+msgstr "Отложенный запуск"
+
+msgid "Delete"
+msgstr "Удалить"
+
+msgid "Delete this message?"
+msgstr "Удалить это сообщение?"
+
+msgid "Detected Ports"
+msgstr "Обнаруженные порты"
+
+msgid "Device Path"
+msgstr "Путь к устройству"
+
+msgid "Dial"
+msgstr "Подключить"
+
+msgid "Dial Configuration"
+msgstr "Настройка подключения"
+
+msgid "Dial Control"
+msgstr "Управление подключением"
+
+msgid "Dial Log"
+msgstr "Журнал подключения"
+
+msgid "Dial Mode"
+msgstr "Режим подключения"
+
+msgid "Dial Mode Configuration"
+msgstr "Настройка режима подключения"
+
+msgid "Dial command sent successfully"
+msgstr "Команда подключения отправлена"
+
+msgid "Dial disabled for this modem"
+msgstr "Подключение для этого модема отключено"
+
+msgid "Disable"
+msgstr "Отключить"
+
+msgid "Disconnected"
+msgstr "Отключено"
+
+msgid "Discontinuous Reception"
+msgstr "Прерывистый приём (DRX)"
+
+msgid "Download"
+msgstr "Скачать"
+
+msgid "Duplex Mode"
+msgstr "Дуплексный режим"
+
+msgid "E-UTRA Absolute Radio Frequency Channel Number"
+msgstr "Абсолютный номер радиоканала E-UTRA (EARFCN)"
+
+msgid "Ec/Io"
+msgstr "Ec/Io"
+
+msgid "Ec/No"
+msgstr "Ec/No"
+
+msgid "Enable"
+msgstr "Включить"
+
+msgid "Enable Dial"
+msgstr "Включить подключение"
+
+msgid "Enable Dial (Global)"
+msgstr "Включить подключение (глобально)"
+
+msgid "Enable PCIe Scan"
+msgstr "Включить сканирование PCIe"
+
+msgid "Enable USB Scan"
+msgstr "Включить сканирование USB"
+
+msgid ""
+"Enable if SMS timestamps appear 8 hours ahead (e.g., UTC+8 local time parsed"
+" as UTC+0)"
+msgstr ""
+"Включите, если время SMS опережает на 8 часов (например, местное время UTC+8"
+" разобрано как UTC+0)"
+
+msgid "Enable to use Ubus AT daemon instead of direct serial port access"
+msgstr ""
+"Использовать демон Ubus AT вместо прямого доступа к последовательному порту"
+
+msgid "Enabled"
+msgstr "Включено"
+
+msgid "Encoding"
+msgstr "Кодировка"
+
+msgid "Energy per Chip over Noise"
+msgstr "Энергия на чип к шуму"
+
+msgid "Enter exactly 15 digits"
+msgstr "Введите ровно 15 цифр"
+
+msgid "Enter phone number"
+msgstr "Введите номер телефона"
+
+msgid "Enter your message here..."
+msgstr "Введите сообщение..."
+
+msgid "Error"
+msgstr "Ошибка"
+
+msgid "Error loading AT configuration: %s"
+msgstr "Ошибка загрузки конфигурации AT: %s"
+
+msgid "Error loading IMEI"
+msgstr "Ошибка загрузки IMEI"
+
+msgid "Error loading IMEI: %s"
+msgstr "Ошибка загрузки IMEI: %s"
+
+msgid "Error loading SMS: "
+msgstr "Ошибка загрузки SMS: "
+
+msgid "Error loading features: %s"
+msgstr "Ошибка загрузки функций: %s"
+
+msgid "Error loading lock band configuration:"
+msgstr "Ошибка загрузки конфигурации диапазонов:"
+
+msgid "Error loading messages: "
+msgstr "Ошибка загрузки сообщений: "
+
+msgid "Error loading mode"
+msgstr "Ошибка загрузки режима"
+
+msgid "Error loading mode: %s"
+msgstr "Ошибка загрузки режима: %s"
+
+msgid "Error loading modem information: %s"
+msgstr "Ошибка загрузки информации о модеме: %s"
+
+msgid "Error loading network preference: %s"
+msgstr "Ошибка загрузки приоритета сетей: %s"
+
+msgid "Error loading preference"
+msgstr "Ошибка загрузки приоритета"
+
+msgid "Error loading reboot capabilities: %s"
+msgstr "Ошибка загрузки вариантов перезагрузки: %s"
+
+msgid "Error loading status"
+msgstr "Ошибка загрузки статуса"
+
+msgid "Error scanning neighbor cells: %s"
+msgstr "Ошибка сканирования соседних сот: %s"
+
+msgid "Error: "
+msgstr "Ошибка: "
+
+msgid "Error: %s"
+msgstr "Ошибка: %s"
+
+msgid "Error: Please enter AT command"
+msgstr "Ошибка: введите AT-команду"
+
+msgid "Extend Prefix"
+msgstr "Расширенный префикс"
+
+msgid "Failed"
+msgstr "Ошибка"
+
+msgid "Failed to apply lock band configuration"
+msgstr "Не удалось применить привязку к диапазонам"
+
+msgid "Failed to apply lock cell configuration"
+msgstr "Не удалось применить привязку к соте"
+
+msgid "Failed to clear log"
+msgstr "Не удалось очистить журнал"
+
+msgid "Failed to delete SMS: "
+msgstr "Не удалось удалить SMS: "
+
+msgid "Failed to download log: "
+msgstr "Не удалось скачать журнал: "
+
+msgid "Failed to initiate hard reboot"
+msgstr "Не удалось запустить жёсткую перезагрузку"
+
+msgid "Failed to initiate soft reboot"
+msgstr "Не удалось запустить мягкую перезагрузку"
+
+msgid "Failed to load AT configuration"
+msgstr "Не удалось загрузить конфигурацию AT"
+
+msgid "Failed to load SMS: "
+msgstr "Не удалось загрузить SMS: "
+
+msgid "Failed to load available modes"
+msgstr "Не удалось загрузить доступные режимы"
+
+msgid "Failed to load log"
+msgstr "Не удалось загрузить журнал"
+
+msgid "Failed to load messages: "
+msgstr "Не удалось загрузить сообщения: "
+
+msgid "Failed to load network preferences"
+msgstr "Не удалось загрузить приоритеты сетей"
+
+msgid "Failed to load reboot capabilities"
+msgstr "Не удалось загрузить варианты перезагрузки"
+
+msgid "Failed to load status"
+msgstr "Не удалось загрузить статус"
+
+msgid "Failed to save configuration: "
+msgstr "Не удалось сохранить конфигурацию: "
+
+msgid "Failed to send"
+msgstr "Не удалось отправить"
+
+msgid "Failed to send SMS: "
+msgstr "Не удалось отправить SMS: "
+
+msgid "Failed to send dial command"
+msgstr "Не удалось отправить команду подключения"
+
+msgid "Failed to send hang command"
+msgstr "Не удалось отправить команду отключения"
+
+msgid "Failed to send redial command"
+msgstr "Не удалось отправить команду переподключения"
+
+msgid "Failed to set IMEI"
+msgstr "Не удалось установить IMEI"
+
+msgid "Failed to set mode"
+msgstr "Не удалось установить режим"
+
+msgid "Failed to set network preference"
+msgstr "Не удалось установить приоритет сетей"
+
+msgid "Failed to start QModem Network: "
+msgstr "Не удалось запустить сеть QModem: "
+
+msgid "Failed to stop QModem Network: "
+msgstr "Не удалось остановить сеть QModem: "
+
+msgid ""
+"For 5G modules using the Ethernet PHY connection, please specify the network"
+" interface name (e.g., eth0, eth1)"
+msgstr ""
+"Для 5G-модулей, подключённых через Ethernet PHY, укажите имя сетевого "
+"интерфейса (например, eth0, eth1)"
+
+msgid ""
+"For M.2 slots with both PCIe and USB support, specify the associated USB "
+"port (for ttyUSB access)"
+msgstr ""
+"Для слотов M.2 с поддержкой PCIe и USB укажите связанный USB-порт (для "
+"доступа к ttyUSB)"
+
+msgid "Freq band indicator"
+msgstr "Индикатор частотного диапазона"
+
+msgid "Friday"
+msgstr "Пятница"
+
+msgid "Full scan completed successfully"
+msgstr "Полное сканирование завершено"
+
+msgid "Full scan error: "
+msgstr "Ошибка полного сканирования: "
+
+msgid "Full scan failed"
+msgstr "Полное сканирование не удалось"
+
+msgid "GPIO Down Value"
+msgstr "Значение GPIO (низкий уровень)"
+
+msgid "GPIO Up Value"
+msgstr "Значение GPIO (высокий уровень)"
+
+msgid "GPIO pin for power control"
+msgstr "Пин GPIO для управления питанием"
+
+msgid "Global Configuration"
+msgstr "Глобальная конфигурация"
+
+msgid "Hang"
+msgstr "Отключить"
+
+msgid "Hang command sent successfully"
+msgstr "Команда отключения отправлена"
+
+msgid "Hard Reboot"
+msgstr "Жёсткая перезагрузка"
+
+msgid "Hard reboot initiated successfully. The modem is restarting..."
+msgstr "Жёсткая перезагрузка запущена. Модем перезапускается..."
+
+msgid "IMEI Configuration"
+msgstr "Настройка IMEI"
+
+msgid "IMEI must be exactly 15 digits"
+msgstr "IMEI должен содержать ровно 15 цифр"
+
+msgid "IMEI must contain only numbers"
+msgstr "IMEI должен содержать только цифры"
+
+msgid ""
+"IMEI set successfully. Please reboot the modem for changes to take effect."
+msgstr ""
+"IMEI установлен. Перезагрузите модем, чтобы изменения вступили в силу."
+
+msgid "IPv4"
+msgstr "IPv4"
+
+msgid "IPv4/IPv6"
+msgstr "IPv4/IPv6"
+
+msgid "IPv6"
+msgstr "IPv6"
+
+msgid "If enabled, the modem auto scan will be blocked."
+msgstr "Если включено, автосканирование модема будет заблокировано."
+
+msgid "If enabled, using alternative AT Tools"
+msgstr "Если включено, используются альтернативные AT-инструменты"
+
+msgid "Incomplete (part "
+msgstr "Неполное (часть "
+
+msgid "Information"
+msgstr "Информация"
+
+msgid "Integrate Circuit Card Identity"
+msgstr "Идентификатор SIM-карты (ICCID)"
+
+msgid "International Mobile Equipment Identity"
+msgstr "Международный идентификатор оборудования (IMEI)"
+
+msgid "International Mobile Subscriber Identity"
+msgstr "Международный идентификатор абонента (IMSI)"
+
+msgid "Internet Service Provider"
+msgstr "Интернет-провайдер"
+
+msgid "Invalid contact"
+msgstr "Неверный контакт"
+
+msgid "Invalid lockband data structure"
+msgstr "Неверная структура данных диапазонов"
+
+msgid "LED indicator for SIM card status"
+msgstr "Индикатор статуса SIM-карты"
+
+msgid "LED indicator for network connection status"
+msgstr "Индикатор статуса сетевого подключения"
+
+msgid "LTE Band"
+msgstr "Диапазон LTE"
+
+msgid "LTE Cells"
+msgstr "Соты LTE"
+
+msgid "LTE DL"
+msgstr "LTE DL"
+
+msgid "LTE Information"
+msgstr "Информация LTE"
+
+msgid "LTE UL"
+msgstr "LTE UL"
+
+msgid "Last Message"
+msgstr "Последнее сообщение"
+
+msgid "Last update"
+msgstr "Последнее обновление"
+
+msgid "Length"
+msgstr "Длина"
+
+msgid "Loading available modes..."
+msgstr "Загрузка доступных режимов..."
+
+msgid "Loading available networks..."
+msgstr "Загрузка доступных сетей..."
+
+msgid "Loading band configuration..."
+msgstr "Загрузка конфигурации диапазонов..."
+
+msgid "Loading messages..."
+msgstr "Загрузка сообщений..."
+
+msgid "Loading modem information..."
+msgstr "Загрузка информации о модеме..."
+
+msgid "Loading reboot capabilities..."
+msgstr "Загрузка вариантов перезагрузки..."
+
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgid "Location Area Code"
+msgstr "Код локальной зоны (LAC)"
+
+msgid "Lock Band"
+msgstr "Привязка к диапазонам"
+
+msgid "Lock Band Configuration"
+msgstr "Настройка привязки к диапазонам"
+
+msgid "Lock Cell Settings"
+msgstr "Настройки привязки к соте"
+
+msgid "Lock Cell Status"
+msgstr "Статус привязки к соте"
+
+msgid "Lock band configuration applied for %s"
+msgstr "Привязка к диапазонам применена для %s"
+
+msgid "Lock cell configuration applied successfully"
+msgstr "Привязка к соте применена"
+
+msgid ""
+"Lock modem to specific frequency bands. Select bands for each network type "
+"(UMTS/LTE/NR)."
+msgstr ""
+"Привязка модема к определённым частотным диапазонам. Выберите диапазоны для "
+"каждого типа сети (UMTS/LTE/NR)."
+
+msgid "Locked Bands"
+msgstr "Закреплённые диапазоны"
+
+msgid "Log cleared successfully"
+msgstr "Журнал очищен"
+
+msgid "Log downloaded successfully"
+msgstr "Журнал скачан"
+
+msgid "Manufacturer"
+msgstr "Производитель"
+
+msgid "Message"
+msgstr "Сообщение"
+
+msgid "Message deleted"
+msgstr "Сообщение удалено"
+
+msgid "Message sent successfully"
+msgstr "Сообщение отправлено"
+
+msgid "Mobile Country Code"
+msgstr "Мобильный код страны (MCC)"
+
+msgid "Mobile Network Code"
+msgstr "Код мобильной сети (MNC)"
+
+msgid "Mode set successfully. Please reboot the modem."
+msgstr "Режим установлен. Перезагрузите модем."
+
+msgid "Model"
+msgstr "Модель"
+
+msgid "Model Name"
+msgstr "Название модели"
+
+msgid "Modem Alias"
+msgstr "Псевдоним модема"
+
+msgid "Modem Device"
+msgstr "Устройство модема"
+
+msgid "Modem Devices"
+msgstr "Устройства модема"
+
+msgid "Modem Model"
+msgstr "Модель модема"
+
+msgid "Modem Name"
+msgstr "Имя модема"
+
+msgid "Modem Offline"
+msgstr "Модем не в сети"
+
+msgid "Modem Probe Settings"
+msgstr "Настройки обнаружения модема"
+
+msgid "Modem Slot Configuration"
+msgstr "Настройка слотов модема"
+
+msgid "Monday"
+msgstr "Понедельник"
+
+msgid "Multi-part"
+msgstr "Составное"
+
+msgid "NR (5G) Cells"
+msgstr "Соты NR (5G)"
+
+msgid "NR Band"
+msgstr "Диапазон NR"
+
+msgid "Name"
+msgstr "Имя"
+
+msgid "Neighbor Cell"
+msgstr "Соседняя сота"
+
+msgid "Neighbor Cell / Lock Cell"
+msgstr "Соседние соты / Привязка к соте"
+
+msgid "Neighbor Cell List"
+msgstr "Список соседних сот"
+
+msgid "Network LED"
+msgstr "Индикатор сети"
+
+msgid "Network Mode"
+msgstr "Режим сети"
+
+msgid "Network Preference"
+msgstr "Приоритет сетей"
+
+msgid "Network Preference Configuration"
+msgstr "Настройка приоритета сетей"
+
+msgid "Network Type"
+msgstr "Тип сети"
+
+msgid "Network preference set successfully"
+msgstr "Приоритет сетей установлен"
+
+msgid "New Conversation"
+msgstr "Новая переписка"
+
+msgid "New IMEI"
+msgstr "Новый IMEI"
+
+msgid "No"
+msgstr "Нет"
+
+msgid "No bands available for this modem"
+msgstr "Для этого модема нет доступных диапазонов"
+
+msgid "No features available for this modem."
+msgstr "Для этого модема нет доступных функций."
+
+msgid "No log available"
+msgstr "Журнал пуст"
+
+msgid "No log content to download"
+msgstr "Нет содержимого журнала для скачивания"
+
+msgid "No messages found"
+msgstr "Сообщения не найдены"
+
+msgid "No messages in this conversation"
+msgstr "В этой переписке нет сообщений"
+
+msgid "No modem configured."
+msgstr "Модем не настроен."
+
+msgid "No modems configured or all modems are disabled."
+msgstr "Модемы не настроены или все отключены."
+
+msgid "No modes available"
+msgstr "Нет доступных режимов"
+
+msgid "No neighbor cells found. Make sure the modem has network signal."
+msgstr "Соседние соты не найдены. Убедитесь, что у модема есть сигнал сети."
+
+msgid "No network types available"
+msgstr "Нет доступных типов сети"
+
+msgid "No reboot methods available for this modem"
+msgstr "Для этого модема нет способов перезагрузки"
+
+msgid "No response received"
+msgstr "Ответ не получен"
+
+msgid "No result returned from getLockBand"
+msgstr "getLockBand не вернул результат"
+
+msgid "No result returned from neighbor cell scan"
+msgstr "Сканирование соседних сот не вернуло результат"
+
+msgid "No status information available"
+msgstr "Нет информации о статусе"
+
+msgid "No.1"
+msgstr "№1"
+
+msgid "No.2"
+msgstr "№2"
+
+msgid "No.3"
+msgstr "№3"
+
+msgid "No.4"
+msgstr "№4"
+
+msgid "No.5"
+msgstr "№5"
+
+msgid "No.6"
+msgstr "№6"
+
+msgid "None"
+msgstr "Нет"
+
+msgid "None (All bands unlocked)"
+msgstr "Нет (все диапазоны разблокированы)"
+
+msgid "Not available"
+msgstr "Недоступно"
+
+msgid "Once enabled, the PCIe ports will be scanned on every boot."
+msgstr "Если включено, PCIe-порты будут сканироваться при каждой загрузке."
+
+msgid "Once enabled, the USB ports will be scanned on every boot."
+msgstr "Если включено, USB-порты будут сканироваться при каждой загрузке."
+
+msgid "Override AT Port"
+msgstr "Переопределить AT-порт"
+
+msgid "PCI"
+msgstr "PCI"
+
+msgid "PCI and ARFCN are required"
+msgstr "Требуются PCI и ARFCN"
+
+msgid "PCIe"
+msgstr "PCIe"
+
+msgid "PCIe scan completed successfully"
+msgstr "Сканирование PCIe завершено"
+
+msgid "PCIe scan error: "
+msgstr "Ошибка сканирования PCIe: "
+
+msgid "PCIe scan failed"
+msgstr "Сканирование PCIe не удалось"
+
+msgid "PDP Type"
+msgstr "Тип PDP"
+
+msgid "Parse received SMS time as UTC+0"
+msgstr "Считать время входящих SMS как UTC+0"
+
+msgid "Parse sent SMS time as UTC+0"
+msgstr "Считать время исходящих SMS как UTC+0"
+
+msgid "Path to SMS database file"
+msgstr "Путь к файлу базы данных SMS"
+
+msgid "Phone Number"
+msgstr "Номер телефона"
+
+msgid "Physical Cell ID"
+msgstr "Физический ID соты (PCI)"
+
+msgid "Physical Channel"
+msgstr "Физический канал"
+
+msgid "Physical slot identifier (e.g., 1-1.4, 0000:01:00.0)"
+msgstr "Идентификатор физического слота (например, 1-1.4, 0000:01:00.0)"
+
+msgid "Please check browser console for more details"
+msgstr "Подробности смотрите в консоли браузера"
+
+msgid "Please enter a message"
+msgstr "Введите сообщение"
+
+msgid "Please enter a phone number"
+msgstr "Введите номер телефона"
+
+msgid "Please select a mode"
+msgstr "Выберите режим"
+
+msgid "Please select at least one network type"
+msgstr "Выберите хотя бы один тип сети"
+
+msgid "Power GPIO"
+msgstr "GPIO питания"
+
+msgid ""
+"Power cycles the modem completely. Takes longer but ensures a full restart."
+msgstr ""
+"Полное отключение и включение питания модема. Дольше, но гарантирует полный "
+"перезапуск."
+
+msgid "Primary Scrambling Code"
+msgstr "Первичный скремблирующий код"
+
+msgid "QModem Configuration"
+msgstr "Конфигурация QModem"
+
+msgid "QModem Network"
+msgstr "Сеть QModem"
+
+msgid "QModem Network started successfully"
+msgstr "Сеть QModem запущена"
+
+msgid "QModem Network stopped successfully"
+msgstr "Сеть QModem остановлена"
+
+msgid "QModem Settings"
+msgstr "Настройки QModem"
+
+msgid "Quick Commands"
+msgstr "Быстрые команды"
+
+msgid "RAT"
+msgstr "RAT"
+
+msgid "RX Power (dBm)"
+msgstr "Мощность приёма (dBm)"
+
+msgid "Radio Access Technology"
+msgstr "Технология радиодоступа"
+
+msgid "Radio Signal Strength Noise Ratio"
+msgstr "Отношение сигнал/шум (RSSNR)"
+
+msgid "ReDial"
+msgstr "Переподключить"
+
+msgid "Reboot Modem"
+msgstr "Перезагрузить модем"
+
+msgid "Reboot Options"
+msgstr "Варианты перезагрузки"
+
+msgid ""
+"Reboot the modem device. Soft reboot restarts the modem firmware, hard "
+"reboot power cycles the modem."
+msgstr ""
+"Перезагрузка модема. Мягкая перезапускает прошивку модема, жёсткая — "
+"отключает и включает питание."
+
+msgid "Rebooting..."
+msgstr "Перезагрузка..."
+
+msgid "Receive Rate"
+msgstr "Скорость приёма"
+
+msgid "Received Signal Code Power"
+msgstr "Мощность принимаемого кода (RSCP)"
+
+msgid "Received Signal Level"
+msgstr "Уровень принимаемого сигнала"
+
+msgid "Received Signal Strength Indicator"
+msgstr "Индикатор уровня сигнала (RSSI)"
+
+msgid "Redial command sent successfully"
+msgstr "Команда переподключения отправлена"
+
+msgid "Reference Signal Received Power"
+msgstr "Мощность опорного сигнала (RSRP)"
+
+msgid "Reference Signal Received Quality"
+msgstr "Качество опорного сигнала (RSRQ)"
+
+msgid "Refresh"
+msgstr "Обновить"
+
+msgid "Response"
+msgstr "Ответ"
+
+msgid ""
+"Restarts the modem firmware without power cycling. Faster but may not "
+"resolve all issues."
+msgstr ""
+"Перезапуск прошивки модема без отключения питания. Быстрее, но может решить "
+"не все проблемы."
+
+msgid "Revision"
+msgstr "Ревизия"
+
+msgid "Routing Area Code"
+msgstr "Код зоны маршрутизации (RAC)"
+
+msgid "Running"
+msgstr "Работает"
+
+msgid "RxLev"
+msgstr "RxLev"
+
+msgid "SCS"
+msgstr "SCS"
+
+msgid "SIM Error,Error code:"
+msgstr "Ошибка SIM, код ошибки:"
+
+msgid "SIM LED"
+msgstr "Индикатор SIM"
+
+msgid "SIM Number"
+msgstr "Номер SIM"
+
+msgid "SIM Slot"
+msgstr "Слот SIM"
+
+msgid "SIM Status"
+msgstr "Статус SIM"
+
+msgid "SMS AT Port"
+msgstr "AT-порт для SMS"
+
+msgid "SMS Conversation"
+msgstr "Переписка SMS"
+
+msgid "SMS Database Path"
+msgstr "Путь к базе данных SMS"
+
+msgid "SMS Forwarder"
+msgstr "Пересылка SMS"
+
+msgid "SMS Messages"
+msgstr "SMS-сообщения"
+
+msgid "Saturday"
+msgstr "Суббота"
+
+msgid "Scan ALL Manually"
+msgstr "Сканировать всё вручную"
+
+msgid "Scan Neighbor Cells"
+msgstr "Сканировать соседние соты"
+
+msgid "Scan PCIe Manually"
+msgstr "Сканировать PCIe вручную"
+
+msgid "Scan USB Manually"
+msgstr "Сканировать USB вручную"
+
+msgid ""
+"Scan neighboring cell towers and lock modem to specific cell. You can scan "
+"for nearby cells and then lock to a specific cell by copying its parameters."
+msgstr ""
+"Сканирование соседних базовых станций и привязка модема к соте. Найдите "
+"ближайшие соты и закрепитесь на нужной, скопировав её параметры."
+
+msgid "Scanning"
+msgstr "Сканирование"
+
+msgid "Scanning PCIe ports, please wait..."
+msgstr "Сканирование PCIe-портов, подождите..."
+
+msgid "Scanning USB ports, please wait..."
+msgstr "Сканирование USB-портов, подождите..."
+
+msgid "Scanning all ports, please wait..."
+msgstr "Сканирование всех портов, подождите..."
+
+msgid "Scanning neighbor cells..."
+msgstr "Сканирование соседних сот..."
+
+msgid "Scanning..."
+msgstr "Сканирование..."
+
+msgid "Select AT Port"
+msgstr "Выберите AT-порт"
+
+msgid "Select All / None"
+msgstr "Выбрать все / ничего"
+
+msgid "Select Bands"
+msgstr "Выберите диапазоны"
+
+msgid "Select Mode"
+msgstr "Выберите режим"
+
+msgid "Select Networks"
+msgstr "Выберите сети"
+
+msgid "Send"
+msgstr "Отправить"
+
+msgid "Send AT Command"
+msgstr "Отправить AT-команду"
+
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+msgid "Sending command..."
+msgstr "Отправка команды..."
+
+msgid "Sending message..."
+msgstr "Отправка сообщения..."
+
+msgid "Sending..."
+msgstr "Отправка..."
+
+msgid "Serving Cell Receive Level"
+msgstr "Уровень приёма обслуживающей соты"
+
+msgid "Set IMEI"
+msgstr "Установить IMEI"
+
+msgid "Setting..."
+msgstr "Установка..."
+
+msgid "Signal to Interference plus Noise Ratio"
+msgstr "Отношение сигнал/(помеха+шум) (SINR)"
+
+msgid "Signal to Interference plus Noise Ratio Bandwidth"
+msgstr "Полоса SINR"
+
+msgid "Slot"
+msgstr "Слот"
+
+msgid "Slot ID"
+msgstr "ID слота"
+
+msgid "Slot Type"
+msgstr "Тип слота"
+
+msgid "Soft Reboot"
+msgstr "Мягкая перезагрузка"
+
+msgid "Soft reboot initiated successfully. The modem is restarting..."
+msgstr "Мягкая перезагрузка запущена. Модем перезапускается..."
+
+msgid "Speech Code"
+msgstr "Речевой кодек"
+
+msgid "Spreading Factor"
+msgstr "Коэффициент расширения спектра"
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Sunday"
+msgstr "Воскресенье"
+
+msgid "TX Power"
+msgstr "Мощность передачи"
+
+msgid "TX Power (dBm)"
+msgstr "Мощность передачи (dBm)"
+
+msgid "Temperature"
+msgstr "Температура"
+
+msgid ""
+"The first module loaded into this slot will automatically be assigned this "
+"default metric."
+msgstr ""
+"Первому модулю, установленному в этот слот, будет автоматически присвоена "
+"эта метрика по умолчанию."
+
+msgid "Thursday"
+msgstr "Четверг"
+
+msgid "Time"
+msgstr "Время"
+
+msgid "Tracking Area Code"
+msgstr "Код зоны отслеживания (TAC)"
+
+msgid "Tracking area code"
+msgstr "Код зоны отслеживания"
+
+msgid "Tracking area code of cell served by neighbor Enb"
+msgstr "Код зоны отслеживания соты соседней eNB"
+
+msgid "Transmit Rate"
+msgstr "Скорость передачи"
+
+msgid "Try Preset PCIe Port"
+msgstr "Попробовать предустановленный PCIe-порт"
+
+msgid "Try Preset USB Port"
+msgstr "Попробовать предустановленный USB-порт"
+
+msgid "Tuesday"
+msgstr "Вторник"
+
+msgid "Tx Power"
+msgstr "Мощность передачи"
+
+msgid "UL"
+msgstr "UL"
+
+msgid "UL Bandwidth"
+msgstr "Полоса UL"
+
+msgid "UL CA"
+msgstr "UL CA"
+
+msgid "USB"
+msgstr "USB"
+
+msgid "USB scan completed successfully"
+msgstr "Сканирование USB завершено"
+
+msgid "USB scan error: "
+msgstr "Ошибка сканирования USB: "
+
+msgid "USB scan failed"
+msgstr "Сканирование USB не удалось"
+
+msgid "UTRA Absolute Radio Frequency Channel Number"
+msgstr "Абсолютный номер радиоканала UTRA (UARFCN)"
+
+msgid "Units: seconds"
+msgstr "Единицы: секунды"
+
+msgid "Unknown"
+msgstr "Неизвестно"
+
+msgid "Uplink Absolute Radio Frequency Channel Number"
+msgstr "Абсолютный номер радиоканала uplink"
+
+msgid "Use Slot 1 Config"
+msgstr "Использовать настройки слота 1"
+
+msgid "Use Ubus AT Daemon"
+msgstr "Использовать демон Ubus AT"
+
+msgid "View Log"
+msgstr "Просмотр журнала"
+
+msgid ""
+"View and manage SMS messages. Messages are grouped by sender/recipient."
+msgstr ""
+"Просмотр и управление SMS. Сообщения сгруппированы по "
+"отправителю/получателю."
+
+msgid ""
+"View and modify the modem IMEI number. IMEI must be 15 digits. Changes "
+"require modem reboot to take effect."
+msgstr ""
+"Просмотр и изменение IMEI модема. IMEI должен содержать 15 цифр. Изменения "
+"вступят в силу после перезагрузки модема."
+
+msgid "Voltage"
+msgstr "Напряжение"
+
+msgid "WCDMA Information"
+msgstr "Информация WCDMA"
+
+msgid "Warning: "
+msgstr "Внимание: "
+
+msgid "Wednesday"
+msgstr "Среда"
+
+msgid "Yes"
+msgstr "Да"
+
+msgid "Yesterday"
+msgstr "Вчера"
+
+msgid "Modem"
+msgstr "Модем"
+
+msgid "QModem"
+msgstr "QModem"
+
+msgid "Overview"
+msgstr "Обзор"
+
+msgid "NetworkConfiguration"
+msgstr "Настройка сети"
+
+msgid "Advanced Modem Config"
+msgstr "Расширенная настройка модема"
+
+msgid "A1 (AT)"
+msgstr "A1 (AT)"
+
+msgid "Authentication Type"
+msgstr "Тип аутентификации"
+
+msgid "Auto Choose"
+msgstr "Автовыбор"
+
+msgid "Beeline (RU)"
+msgstr "Билайн (RU)"
+
+msgid "Bridge Mode"
+msgstr "Режим моста"
+
+msgid ""
+"Caution: Enabling this option will make it the IPV6 RA Master, and only one "
+"interface can be configured as such."
+msgstr ""
+"Внимание: при включении этот интерфейс станет главным для IPv6 RA; такой "
+"интерфейс может быть только один."
+
+msgid "Caution: Only avalible for quectel sdx 5G Modem."
+msgstr "Внимание: только для 5G-модемов Quectel на SDX."
+
+msgid "Celcom (MY)"
+msgstr "Celcom (MY)"
+
+msgid "China Broadcast (CN)"
+msgstr "China Broadcast (CN)"
+
+msgid "China Mobile (CN)"
+msgstr "China Mobile (CN)"
+
+msgid "China Telecom (CN)"
+msgstr "China Telecom (CN)"
+
+msgid "China Unicom (CN)"
+msgstr "China Unicom (CN)"
+
+msgid "DNS"
+msgstr "DNS"
+
+msgid "DiGi (MY)"
+msgstr "DiGi (MY)"
+
+msgid "Dito Telecomunity (PH)"
+msgstr "Dito Telecomunity (PH)"
+
+msgid "Do Not modify resolv.conf"
+msgstr "Не изменять resolv.conf"
+
+msgid "Drei (AT)"
+msgstr "Drei (AT)"
+
+msgid "E-Plus (DE)"
+msgstr "E-Plus (DE)"
+
+msgid "Failed to disable QModem Network: "
+msgstr "Не удалось отключить сеть QModem: "
+
+msgid "Failed to enable QModem Network: "
+msgstr "Не удалось включить сеть QModem: "
+
+msgid "Force Set APN"
+msgstr "Принудительно задать APN"
+
+msgid "Globe Postpaid (PH)"
+msgstr "Globe постоплата (PH)"
+
+msgid "Globe Prepaid (PH)"
+msgstr "Globe предоплата (PH)"
+
+msgid ""
+"If enabled, the APN will be set even if it matches the current "
+"configuration.(only works with tom modified version of quectel-cm)"
+msgstr ""
+"Если включено, APN будет задан, даже если совпадает с текущей конфигурацией."
+" (Работает только с модифицированной Tom версией quectel-cm)"
+
+msgid "If slot 2 config is not set,will use slot 1 config."
+msgstr "Если настройки слота 2 не заданы, используются настройки слота 1."
+
+msgid ""
+"If the DNS server is not set, it will use the DNS server leased by the "
+"operator."
+msgstr "Если DNS-сервер не задан, будет использоваться DNS-сервер оператора."
+
+msgid "If the PIN code is not set, leave it blank."
+msgstr "Если PIN-код не установлен, оставьте поле пустым."
+
+msgid "MTS (RU)"
+msgstr "МТС (RU)"
+
+msgid "Magenta (AT)"
+msgstr "Magenta (AT)"
+
+msgid "Maxis UT (MY)"
+msgstr "Maxis UT (MY)"
+
+msgid "Maxis | Hotlink (MY)"
+msgstr "Maxis | Hotlink (MY)"
+
+msgid "Megafon (RU)"
+msgstr "МегаФон (RU)"
+
+msgid "Metric"
+msgstr "Метрика"
+
+msgid "Modem Info"
+msgstr "Информация о модеме"
+
+msgid "Modem Slot"
+msgstr "Слот модема"
+
+msgid "MsChapV2"
+msgstr "MS-CHAPv2"
+
+msgid "NONE"
+msgstr "Нет"
+
+msgid "No modem information available"
+msgstr "Нет информации о модеме"
+
+msgid "Once checking, the prefix will be apply to lan zone"
+msgstr "Если отмечено, префикс будет применён к зоне LAN"
+
+msgid "PAP/CHAP Password"
+msgstr "Пароль PAP/CHAP"
+
+msgid "PAP/CHAP Username"
+msgstr "Имя пользователя PAP/CHAP"
+
+msgid "PDP Context Index"
+msgstr "Индекс PDP-контекста"
+
+msgid "PIN Code"
+msgstr "PIN-код"
+
+msgid "Physical slot identifier (e.g., 1-1.4 for USB, 0000:01:00.0 for PCIe)"
+msgstr ""
+"Идентификатор физического слота (например, 1-1.4 для USB, 0000:01:00.0 для "
+"PCIe)"
+
+msgid "QModem Network disabled successfully"
+msgstr "Сеть QModem отключена"
+
+msgid "QModem Network enabled successfully"
+msgstr "Сеть QModem включена"
+
+msgid "RA Master"
+msgstr "Главный RA"
+
+msgid "Rostelecom (RU)"
+msgstr "Ростелеком (RU)"
+
+msgid "Sber Mobile (RU)"
+msgstr "Сбер Мобайл (RU)"
+
+msgid "Skytone (CN)"
+msgstr "Skytone (CN)"
+
+msgid "Smart Communications (PH)"
+msgstr "Smart Communications (PH)"
+
+msgid "Start"
+msgstr "Запустить"
+
+msgid "Stop"
+msgstr "Остановить"
+
+msgid "Swisscom (CH)"
+msgstr "Swisscom (CH)"
+
+msgid "T-mobile (RU)"
+msgstr "T-mobile (RU)"
+
+msgid "Tele2 (RU)"
+msgstr "Tele2 (RU)"
+
+msgid "Telekom (DE)"
+msgstr "Telekom (DE)"
+
+msgid ""
+"The metric value is used to determine the priority of the route. The smaller"
+" the value, the higher the priority. Cannot duplicate."
+msgstr ""
+"Метрика задаёт приоритет маршрута: чем меньше значение, тем выше приоритет. "
+"Значения не должны повторяться."
+
+msgid "UMobile (MY)"
+msgstr "UMobile (MY)"
+
+msgid "Unifi (MY)"
+msgstr "Unifi (MY)"
+
+msgid "Use Ubus"
+msgstr "Использовать Ubus"
+
+msgid "Vodafone (DE)"
+msgstr "Vodafone (DE)"
+
+msgid "YES (MY)"
+msgstr "YES (MY)"
+
+msgid "Yota (RU)"
+msgstr "Yota (RU)"
+
+msgid "e.g."
+msgstr "напр."
+
+msgid "enable modem soft reboot"
+msgstr "разрешить мягкую перезагрузку модема"
+
+msgid ""
+"quectel-CM will append the DNS server to the resolv.conf file by default.if "
+"you do not want to modify the resolv.conf file, please check this option."
+msgstr ""
+"По умолчанию quectel-CM добавляет DNS-сервер в resolv.conf. Если не хотите "
+"изменять resolv.conf, отметьте эту опцию."
+
+msgid "SMS Forwarder Configuration"
+msgstr "Настройка пересылки SMS"
+
+msgid "GPIO Value(Modem Power Down)"
+msgstr "Значение GPIO (питание модема выкл.)"
+
+msgid "GPIO Value(Modem Power Up)"
+msgstr "Значение GPIO (питание модема вкл.)"
+
+msgid "PushDeer"
+msgstr "PushDeer"
+
+msgid "Webhook"
+msgstr "Webhook"
+
+msgid "Webhook URL"
+msgstr "Webhook URL"
+
+msgid "(beta)"
+msgstr "(бета)"
+
+msgid "(still in beta)"
+msgstr "(ещё в бете)"
+
+msgid "AT commands to execute after modem initialization."
+msgstr "AT-команды, выполняемые после инициализации модема."
+
+msgid "AT commands to execute before dialing."
+msgstr "AT-команды, выполняемые перед подключением."
+
+msgid "Delay of executing AT command after modem initialization, in seconds."
+msgstr "Задержка выполнения AT-команд после инициализации модема, в секундах."
+
+msgid "Delay of executing AT command before dialing, in seconds."
+msgstr "Задержка выполнения AT-команд перед подключением, в секундах."
+
+msgid "Enter AT commands"
+msgstr "Введите AT-команды"
+
+msgid "Enter delay in seconds"
+msgstr "Введите задержку в секундах"
+
+msgid "Post Init AT Commands"
+msgstr "AT-команды после инициализации"
+
+msgid "Post Init Delay"
+msgstr "Задержка после инициализации"
+
+msgid "Pre Dial AT Commands"
+msgstr "AT-команды перед подключением"
+
+msgid "Pre Dial Delay"
+msgstr "Задержка перед подключением"
+
+msgid "Failed to restart QModem Network: "
+msgstr "Не удалось перезапустить сеть QModem: "
+
+msgid "QModem Network restarted successfully"
+msgstr "Сеть QModem перезапущена"
+
+msgid "Restart"
+msgstr "Перезапустить"
+
+msgid "$class_overwrite"
+msgstr "$class_overwrite"
+
+msgid "API Type"
+msgstr "Тип API"
+
+msgid "API configuration saved. Remember to save & apply changes."
+msgstr "Настройки API сохранены. Не забудьте сохранить и применить изменения."
+
+msgid "Base Information"
+msgstr "Основная информация"
+
+msgid "Bot Token"
+msgstr "Токен бота"
+
+msgid "Channel (optional)"
+msgstr "Канал (необязательно)"
+
+msgid "Chat ID"
+msgstr "Chat ID"
+
+msgid "Configure"
+msgstr "Настроить"
+
+msgid "Configure API"
+msgstr "Настроить API"
+
+msgid "Configure API Settings"
+msgstr "Настройки API"
+
+msgid "Configure SMS forwarding instances for different modems and services"
+msgstr "Настройка экземпляров пересылки SMS для разных модемов и сервисов"
+
+msgid "Configure SMS forwarding to various notification services"
+msgstr "Настройка пересылки SMS в различные сервисы уведомлений"
+
+msgid "Configure the API settings for "
+msgstr "Настройки API для "
+
+msgid "Custom PushDeer API endpoint, leave empty to use default"
+msgstr "Свой адрес API PushDeer, оставьте пустым для значения по умолчанию"
+
+msgid "Custom Script"
+msgstr "Свой скрипт"
+
+msgid "Custom format using placeholders: {SENDER}, {CONTENT}, {TIME}"
+msgstr "Свой формат с подстановками: {SENDER}, {CONTENT}, {TIME}"
+
+msgid "Debug"
+msgstr "Отладка"
+
+msgid "Enable SMS Forwarder"
+msgstr "Включить пересылку SMS"
+
+msgid "Feishu Bot"
+msgstr "Бот Feishu"
+
+msgid "Feishu webhook URL from your bot configuration"
+msgstr "URL вебхука Feishu из настроек бота"
+
+msgid "Forward Instances"
+msgstr "Экземпляры пересылки"
+
+msgid "Global Settings"
+msgstr "Глобальные настройки"
+
+msgid "HTTP headers, one per line"
+msgstr "HTTP-заголовки, по одному на строку"
+
+msgid "Headers (optional)"
+msgstr "Заголовки (необязательно)"
+
+msgid "Hide IP"
+msgstr "Скрыть IP"
+
+msgid "I Love U"
+msgstr "I Love U"
+
+msgid "Info"
+msgstr "Инфо"
+
+msgid "Log Level"
+msgstr "Уровень журнала"
+
+msgid "Message Format (optional)"
+msgstr "Формат сообщения (необязательно)"
+
+msgid "Message channel, use | to separate multiple channels"
+msgstr "Канал сообщений, несколько каналов разделяйте символом |"
+
+msgid "Modem Config"
+msgstr "Настройка модема"
+
+msgid "Network Information"
+msgstr "Информация о сети"
+
+msgid "OpenID (optional)"
+msgstr "OpenID (необязательно)"
+
+msgid "OpenID for message forwarding, use comma to separate multiple IDs"
+msgstr "OpenID для пересылки, несколько ID разделяйте запятой"
+
+msgid ""
+"Path to custom forwarding script. Script receives SMS_SENDER, SMS_TIME, "
+"SMS_CONTENT environment variables"
+msgstr ""
+"Путь к своему скрипту пересылки. Скрипт получает переменные окружения "
+"SMS_SENDER, SMS_TIME, SMS_CONTENT"
+
+msgid "Poll Interval (seconds)"
+msgstr "Интервал опроса (сек)"
+
+msgid "Push Key"
+msgstr "Ключ Push"
+
+msgid "PushDeer Push Key from http://pushdeer.com"
+msgstr "Ключ Push PushDeer с http://pushdeer.com"
+
+msgid "Request Method"
+msgstr "Метод запроса"
+
+msgid "SIM Information"
+msgstr "Информация о SIM"
+
+msgid "Save"
+msgstr "Сохранить"
+
+msgid "Script Path"
+msgstr "Путь к скрипту"
+
+msgid "Server (optional)"
+msgstr "Сервер (необязательно)"
+
+msgid "ServerChan"
+msgstr "ServerChan"
+
+msgid "ServerChan API token from https://sctapi.ftqq.com"
+msgstr "Токен API ServerChan с https://sctapi.ftqq.com"
+
+msgid "Supports placeholders: {SENDER}, {CONTENT}, {TIME}"
+msgstr "Поддерживаются подстановки: {SENDER}, {CONTENT}, {TIME}"
+
+msgid "Telegram Bot"
+msgstr "Telegram-бот"
+
+msgid "Token"
+msgstr "Токен"
+
+msgid "Warning"
+msgstr "Внимание"
+
+msgid "Add"
+msgstr "Добавить"
+
+msgid "Add Modem Device"
+msgstr "Добавить устройство модема"
+
+msgid "Available Devices"
+msgstr "Доступные устройства"
+
+msgid "Disabled Features"
+msgstr "Отключённые функции"
+
+msgid "NSA Band"
+msgstr "Диапазон NSA"
+
+msgid "No devices available. Please scan for devices first."
+msgstr "Нет доступных устройств. Сначала выполните сканирование."
+
+msgid "Platform"
+msgstr "Платформа"
+
+msgid "SA Band"
+msgstr "Диапазон SA"
+
+msgid "Select a device to configure:"
+msgstr "Выберите устройство для настройки:"
+
+msgid "Select features to disable for this modem."
+msgstr "Выберите функции, которые нужно отключить для этого модема."
+
+msgid "Supported Modes"
+msgstr "Поддерживаемые режимы"
+
+msgid "Supported driver modes (e.g., RNDIS/NCM/QMI/MBIM/ETH/PPP)"
+msgstr "Поддерживаемые режимы драйвера (например, RNDIS/NCM/QMI/MBIM/ETH/PPP)"
+
+msgid "Type"
+msgstr "Тип"
+
+msgid "Vendor"
+msgstr "Производитель"
+
+msgid "WCDMA Band"
+msgstr "Диапазон WCDMA"
+
+msgid "Cell unlocked successfully"
+msgstr "Сота разблокирована"
+
+msgid "Failed to unlock cell"
+msgstr "Не удалось разблокировать соту"
+
+msgid "Unlock Cell"
+msgstr "Разблокировать соту"
+
+msgid "Unlocking..."
+msgstr "Разблокировка..."
+
+msgid "Do Not NAT(Only for Quectel Modem)"
+msgstr "Без NAT (только для модемов Quectel)"
+
+msgid "If enabled, will turn off NAT function on quectel modem."
+msgstr "Если включено, на модеме Quectel будет отключена функция NAT."
+
+msgid "$arfcn_label"
+msgstr "$arfcn_label"
+
+msgid ""
+"Are you sure you want to remove this modem device? this cannot be roll back "
+"with uci machanism."
+msgstr ""
+"Удалить это устройство модема? Действие нельзя откатить через механизм UCI."
+
+msgid "Band (CA)"
+msgstr "Диапазон (CA)"
+
+msgid "DL Bandwidth (CA)"
+msgstr "Полоса DL (CA)"
+
+msgid "Modem device removal failed: "
+msgstr "Не удалось удалить устройство модема: "
+
+msgid "Modem device removed successfully"
+msgstr "Устройство модема удалено"
+
+msgid "Physical Cell ID (CA)"
+msgstr "Физический ID соты (CA)"
+
+msgid "UL Bandwidth (CA)"
+msgstr "Полоса UL (CA)"
+
+msgid "SIM Switch"
+msgstr "Переключение SIM"
+
+msgid ""
+"Switch between SIM card slots. Note: Some modems may require a reboot after "
+"switching SIM slots."
+msgstr ""
+"Переключение между слотами SIM. Примечание: некоторым модемам после "
+"переключения нужна перезагрузка."
+
+msgid "SIM Switch Status"
+msgstr "Статус переключения SIM"
+
+msgid "Select SIM Slot"
+msgstr "Выберите слот SIM"
+
+msgid "Support"
+msgstr "Поддержка"
+
+msgid "Supported"
+msgstr "Поддерживается"
+
+msgid "Not Supported"
+msgstr "Не поддерживается"
+
+msgid "Current SIM Slot"
+msgstr "Текущий слот SIM"
+
+msgid "Slot 1"
+msgstr "Слот 1"
+
+msgid "Slot 2"
+msgstr "Слот 2"
+
+msgid "SIM Slot 1"
+msgstr "Слот SIM 1"
+
+msgid "SIM Slot 2"
+msgstr "Слот SIM 2"
+
+msgid "This modem does not support SIM switching."
+msgstr "Этот модем не поддерживает переключение SIM."
+
+msgid "Note"
+msgstr "Примечание"
+
+msgid ""
+"Huawei Modem does not support querying SIM slot capabilities via AT "
+"commands.Slot display may be incorrect."
+msgstr ""
+"Модемы Huawei не поддерживают запрос возможностей слотов SIM через AT-"
+"команды. Отображение слотов может быть неверным."
+
+msgid "Switching SIM slot..."
+msgstr "Переключение слота SIM..."
+
+msgid "SIM slot switched to Slot %s successfully."
+msgstr "Слот SIM переключён на слот %s."
+
+msgid "Note: Some modems may require a reboot for the change to take effect."
+msgstr ""
+"Примечание: некоторым модемам для применения изменений нужна перезагрузка."
+
+msgid "Failed to switch SIM slot. Please check modem status."
+msgstr "Не удалось переключить слот SIM. Проверьте состояние модема."
+
+msgid "Error switching SIM slot: %s"
+msgstr "Ошибка переключения слота SIM: %s"
+
+msgid "Error loading SIM switch information: %s"
+msgstr "Ошибка загрузки информации о переключении SIM: %s"
+
+msgid "Result"
+msgstr "Результат"
+
+msgid "SMS Storage"
+msgstr "Хранилище SMS"
+
+msgid "Reading Storage"
+msgstr "Хранилище для чтения"
+
+msgid "Writing Storage"
+msgstr "Хранилище для записи"
+
+msgid "Other Storage"
+msgstr "Прочее хранилище"
+
+msgid "Mobile Equipment (ME)"
+msgstr "Память модема (ME)"
+
+msgid "SIM Card (SM)"
+msgstr "SIM-карта (SM)"
+
+msgid "Apply Storage Settings"
+msgstr "Применить настройки хранилища"
+
+msgid "Failed to get SMS storage: "
+msgstr "Не удалось получить хранилище SMS: "
+
+msgid "Failed to set SMS storage: "
+msgstr "Не удалось задать хранилище SMS: "
+
+msgid "SMS storage settings applied successfully"
+msgstr "Настройки хранилища SMS применены"
+
+msgid "Please wait for storage info to load"
+msgstr "Дождитесь загрузки информации о хранилище"
+
+msgid "Setting SMS Storage"
+msgstr "Настройка хранилища SMS"
+
+msgid "Applying settings..."
+msgstr "Применение настроек..."
+
+msgid "Error loading SMS storage: "
+msgstr "Ошибка загрузки хранилища SMS: "
+
+msgid "Error setting SMS storage: "
+msgstr "Ошибка настройки хранилища SMS: "
+
+msgid "Failed to get SMS storage"
+msgstr "Не удалось получить хранилище SMS"
+
+msgid "Failed to set SMS storage"
+msgstr "Не удалось задать хранилище SMS"
+
+msgid "SIM Card SMS Management"
+msgstr "Управление SMS на SIM-карте"
+
+msgid "SIM Card SMS"
+msgstr "SMS на SIM-карте"
+
+msgid ""
+"View and delete SMS messages stored on SIM card. These are raw messages "
+"before being processed into conversations."
+msgstr ""
+"Просмотр и удаление SMS, хранящихся на SIM-карте. Это исходные сообщения до "
+"объединения в переписки."
+
+msgid "SMS Messages on SIM Card"
+msgstr "SMS на SIM-карте"
+
+msgid "Index"
+msgstr "Индекс"
+
+msgid "Part"
+msgstr "Часть"
+
+msgid "Single"
+msgstr "Одиночное"
+
+msgid "Summary"
+msgstr "Сводка"
+
+msgid "Total Messages"
+msgstr "Всего сообщений"
+
+msgid "Delete All"
+msgstr "Удалить все"
+
+msgid "Confirm Delete"
+msgstr "Подтвердите удаление"
+
+msgid "Are you sure you want to delete this message from SIM card?"
+msgstr "Удалить это сообщение с SIM-карты?"
+
+msgid "Deleting..."
+msgstr "Удаление..."
+
+msgid "Deleting message..."
+msgstr "Удаление сообщения..."
+
+msgid "Message deleted successfully"
+msgstr "Сообщение удалено"
+
+msgid "Failed to delete message"
+msgstr "Не удалось удалить сообщение"
+
+msgid "Confirm Delete All"
+msgstr "Подтвердите удаление всех"
+
+msgid ""
+"Are you sure you want to delete ALL %d messages from SIM card? This action "
+"cannot be undone."
+msgstr "Удалить ВСЕ сообщения (%d) с SIM-карты? Это действие нельзя отменить."
+
+msgid "Deleting all messages... This may take a while."
+msgstr "Удаление всех сообщений... Это может занять время."
+
+msgid "All %d messages deleted successfully"
+msgstr "Удалено сообщений: %d"
+
+msgid "%d messages deleted, %d failed"
+msgstr "Удалено: %d, ошибок: %d"
+
+msgid "Error deleting messages: "
+msgstr "Ошибка удаления сообщений: "
+
+msgid "No messages found on SIM card"
+msgstr "На SIM-карте сообщений не найдено"
+
+msgid "Invalid message index"
+msgstr "Неверный индекс сообщения"
+
+msgid "Error loading SIM SMS: "
+msgstr "Ошибка загрузки SMS с SIM: "
+
+msgid "Failed to load SIM SMS: "
+msgstr "Не удалось загрузить SMS с SIM: "
+
+msgid "Error deleting SMS: "
+msgstr "Ошибка удаления SMS: "
+
+msgid "Boot Hook"
+msgstr "Хук загрузки"
+
+msgid "Reapply lock cell command after modem initialization"
+msgstr "Повторно применять привязку к соте после инициализации модема"
+
+msgid "Delay"
+msgstr "Задержка"
+
+msgid "Country calling code (optional)"
+msgstr "Код страны (необязательно)"
+
+msgid "As entered"
+msgstr "Как введено"
+
+msgid "Save for this modem"
+msgstr "Сохранить для этого модема"
+
+msgid "Send to:"
+msgstr "Отправить на:"
+
+msgid ""
+"Leave empty to send as entered, including service numbers. Use + for a "
+"complete international number. When adding a country code, omit the domestic"
+" trunk prefix."
+msgstr ""
+"Оставьте пустым, чтобы отправлять номер как введён (подходит для сервисных "
+"номеров). Полный международный номер начинайте с +. При указании кода страны"
+" опускайте внутренний префикс (8)."
+
+msgid "Invalid country calling code"
+msgstr "Неверный код страны"
+
+msgid "Invalid phone number"
+msgstr "Неверный номер телефона"
+
+msgid "Invalid international phone number"
+msgstr "Неверный международный номер"
+
+msgid "Loading country calling code"
+msgstr "Загрузка кода страны"
+
+msgid "Failed to load country calling code"
+msgstr "Не удалось загрузить код страны"
+
+msgid "Failed to save country calling code"
+msgstr "Не удалось сохранить код страны"

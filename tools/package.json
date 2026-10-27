@@ -1,0 +1,9 @@
+{
+  "name": "hiveton-h5000m-ru-tools",
+  "private": true,
+  "description": "Extract/patch Chinese string literals in minified JS bundles",
+  "dependencies": {
+    "acorn": "8.14.0",
+    "acorn-walk": "8.3.4"
+  }
+}

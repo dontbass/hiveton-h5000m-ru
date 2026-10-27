@@ -1,0 +1,23 @@
+{
+ "优秀": "Отлично",
+ "良好": "Хорошо",
+ "以下是检测到的内网地址，请点击访问进行测速": "Найденные адреса в LAN — откройте их для теста скорости",
+ "访问": "Открыть",
+ "全球标准网速测试服务": "Международный стандартный тест скорости",
+ "CDN节点测试": "Тест узлов CDN",
+ "测试到主要CDN节点的连接速度": "Скорость соединения с основными узлами CDN",
+ "UST高校节点": "Узел USTC",
+ "中科大教育网节点测试": "Тест узла образовательной сети USTC",
+ "NAT类型测速": "Тест типа NAT",
+ "检测网络NAT类型和连通性": "Определение типа NAT и связности сети",
+ "[17:00:20] 正在连接到测试服务器...": "[17:00:20] Подключение к тестовому серверу...",
+ "：CDN节点 (北京)": ": узел CDN (Пекин)",
+ "网络测速工具": "Тест скорости сети",
+ "专业的网络连接速度检测工具，支持内网和外网测速": "Проверка скорости подключения — в LAN и в интернет",
+ "保存成功 !": "Сохранено!",
+ "删除成功 !": "Удалено!",
+ "配置完成": "Настройка завершена",
+ "配置失败，请重试": "Ошибка настройки, повторите попытку",
+ "应用过滤": "Фильтр приложений",
+ "<div class=\"line\" data-v-de94d0fe></div><div class=\"result\" data-v-de94d0fe><div class=\"result_state\" data-v-de94d0fe><div data-v-de94d0fe>18 ms</div><span class=\"status status_bg2\" data-v-de94d0fe>良好</span><span class=\"result_txt\" data-v-de94d0fe>延迟</span></div><div class=\"result_state\" data-v-de94d0fe><div data-v-de94d0fe>18 ms</div><span class=\"result_txt\" data-v-de94d0fe>延迟</span></div></div>": "<div class=\"line\" data-v-de94d0fe></div><div class=\"result\" data-v-de94d0fe><div class=\"result_state\" data-v-de94d0fe><div data-v-de94d0fe>18 ms</div><span class=\"status status_bg2\" data-v-de94d0fe>Хорошо</span><span class=\"result_txt\" data-v-de94d0fe>Задержка</span></div><div class=\"result_state\" data-v-de94d0fe><div data-v-de94d0fe>18 ms</div><span class=\"result_txt\" data-v-de94d0fe>Задержка</span></div></div>"
+}

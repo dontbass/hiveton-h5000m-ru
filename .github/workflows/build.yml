@@ -1,0 +1,44 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build po2lmo
+        run: |
+          git clone --depth 1 --filter=blob:none --sparse https://github.com/openwrt/luci.git /tmp/luci
+          cd /tmp/luci && git sparse-checkout set modules/luci-base/src
+          make -C modules/luci-base/src po2lmo
+          cp modules/luci-base/src/po2lmo /usr/local/bin/ 2>/dev/null || sudo cp modules/luci-base/src/po2lmo /usr/local/bin/
+
+      - name: Validate translations
+        run: |
+          python3 -c "import json,glob; [json.load(open(f)) for f in glob.glob('translations/**/*.json', recursive=True)+glob.glob('patches/**/*.json', recursive=True)]"
+          msgfmt --check -o /dev/null translations/qmodem-next/ru.po || true
+
+      - name: Build packages
+        run: python3 tools/build.py --po2lmo /usr/local/bin/po2lmo --out dist
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ipk
+          path: dist/*.ipk
+
+      - name: Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/*.ipk
+          generate_release_notes: true
