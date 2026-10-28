@@ -16,3 +16,5 @@ ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i1
 Подробности — в [README](https://github.com/dontbass/hiveton-h5000m-ru#readme).
 
 **v1.2.0:** новый пакет `luci-i18n-overlay-ru` — заставка при бездействии, системные оповещения и страница *Система → Заставка*.
+
+**v1.3.0:** новый пакет `luci-i18n-smsforward-ru` — пересылаемые SMS приходят с русскими подписями («От / Текст / Время / №»).

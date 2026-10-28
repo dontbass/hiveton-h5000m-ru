@@ -1,0 +1,1 @@
+{"target":"/usr/lib/lua/luci/controller/smsforward.lua","orig_md5":"cf37140d72d465025d36177fe458b8e8","orig_size":9519,"new_md5":"e0babd79a1b7e882ab2368673f1163eb","ops":[[3728,23,"sms_title = \"Новое SMS\"","sms_title = \"新信息\""]]}

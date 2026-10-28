@@ -40,8 +40,15 @@ function revert_ops(data, ops) {
 }
 
 function write_atomic(path, data) {
-	let tmp = path + '.ru-tmp';
+	// write to a temp file and rename over the target: keeps working for
+	// running executables and preserves the original permission bits
+	let tmp = path + '.ru-tmp', st = fs.stat(path);
 	if (fs.writefile(tmp, data) == null) return false;
+	if (st) {
+		let mode = st.mode & 4095;
+		if (type(fs.chmod) != 'function' || !fs.chmod(tmp, mode))
+			system(sprintf("chmod %o '%s'", mode, replace(tmp, "'", "'\\''")));
+	}
 	return fs.rename(tmp, path) != null;
 }
 

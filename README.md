@@ -10,6 +10,7 @@
 | `luci-i18n-quickstart-ru` | Главная страница LuCI — QuickStart (iStoreOS): карточки, мастера, тест скорости, Wi-Fi, NAS/RAID |
 | `luci-i18n-qmodem-next-ru` | Раздел **Modem** в меню LuCI (QModem Next 3.0.0) |
 | `luci-i18n-overlay-ru` | Заставка при бездействии (часы, CPU, память, диск, модем), всплывающие системные оповещения от `system-monitor` и страница настроек *Система → Заставка* |
+| `luci-i18n-smsforward-ru` | SmsForward: шаблон пересылаемых SMS («От / Текст / Время / №» вместо «发件人 / 内容 / 时间 / 编号»), история пересылок, журнал службы |
 
 ![Обзор](docs/modemwebui-dashboard.png)
 
@@ -28,8 +29,8 @@ ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i1
 
 ```sh
 cd /tmp
-for p in modemwebui-ru_1.2.2 quickstart-ru_1.01.2 qmodem-next-ru_3.0.0 overlay-ru_1.0.0; do
-  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-3_all.ipk"
+for p in modemwebui-ru_1.2.2 quickstart-ru_1.01.2 qmodem-next-ru_3.0.0 overlay-ru_1.0.0 smsforward-ru_1.0.0; do
+  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-4_all.ipk"
 done
 opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 ```
@@ -55,7 +56,7 @@ opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 Удаление (оригинальные файлы восстанавливаются автоматически):
 
 ```sh
-opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru luci-i18n-overlay-ru
+opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru luci-i18n-overlay-ru luci-i18n-smsforward-ru
 ```
 
 ## Как это работает
@@ -64,6 +65,9 @@ opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-nex
   обычного `luci-app-qmodem-next.ru.lmo`.
 - **QuickStart** грузит словарь `/luci-static/quickstart/i18n/<язык>.json` (vue3-gettext);
   пакет добавляет `ru.json`. Несколько строк, вшитых прямо в код, правятся байтовым патчем.
+- **SmsForward** — скомпилированная программа `/usr/bin/smsforward`. Её строки заменяются
+  на месте: русский текст не длиннее китайского в байтах, остаток добивается нулями, формат
+  `printf` не меняется. После установки служба перезапускается.
 - **Modem WebUI** — это собранный UmiJS/React-бандл, в котором китайский вшит прямо в код
   (переключатель языка там — нерабочая заглушка шаблона). Пакет патчит бандлы на месте.
 
@@ -107,7 +111,9 @@ translations/
                                js-raw.json встраивает перевод сообщений system-monitor на лету
 patches/                       сгенерированные байтовые патчи
 files/ru-patch.uc              применение/откат патчей на роутере
+  smsforward/binary.json       строки программы smsforward (целиком, с \n)
 tools/
+  mkbinpatch.py                патч строк в бинарнике с проверкой длины и printf
   i18n.js                      extract / mkpatch на базе acorn
   mkpatches.sh                 пересборка patches/ из оригинальных файлов
   build.py, mkipk.py           сборка .ipk без SDK

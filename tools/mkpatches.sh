@@ -6,13 +6,14 @@
 #   <dump-root>/www/webui/webui000/web/scripts/loading.js
 #   <dump-root>/www/luci-static/quickstart/index.js
 # On the router:  tar czf /tmp/src.tar.gz /www/webui/webui000/web /www/luci-static/quickstart \\
-#   /www/luci-static/resources/luci-overlay.js /usr/lib/lua/luci/view/overlay /usr/lib/lua/luci/controller/overlay.lua
+#   /www/luci-static/resources/luci-overlay.js /usr/lib/lua/luci/view/overlay /usr/lib/lua/luci/controller/overlay.lua \\
+#   /usr/bin/smsforward /usr/lib/lua/luci/view/smsforward /usr/lib/lua/luci/controller/smsforward.lua
 set -e
 D="$1"; [ -d "$D" ] || { echo "usage: $0 <dump-root>"; exit 1; }
 cd "$(dirname "$0")/.."
 [ -d tools/node_modules ] || (cd tools && npm install --silent)
 
-rm -f patches/quickstart/*.json patches/modemwebui/*.json patches/overlay/*.json
+rm -f patches/quickstart/*.json patches/modemwebui/*.json patches/overlay/*.json patches/smsforward/*.json
 node tools/i18n.js mkpatch translations/quickstart/hardcoded.json \
   "$D/www/luci-static/quickstart/index.js" /www/luci-static/quickstart/index.js \
   patches/quickstart/index.js.json translations/quickstart/raw.json
@@ -35,6 +36,15 @@ if [ -f "$O" ]; then
     /usr/lib/lua/luci/view/overlay/overlay.htm patches/overlay/overlay.htm.json translations/overlay/htm-raw.json
   node tools/i18n.js mkpatch /tmp/empty-dict.json "$D/usr/lib/lua/luci/controller/overlay.lua" \
     /usr/lib/lua/luci/controller/overlay.lua patches/overlay/overlay.lua.json translations/overlay/lua-raw.json
+fi
+# SMS Forward (compiled binary + LuCI page)
+if [ -f "$D/usr/bin/smsforward" ]; then
+  python3 tools/mkbinpatch.py translations/smsforward/binary.json "$D/usr/bin/smsforward" \
+    /usr/bin/smsforward patches/smsforward/smsforward.bin.json || true
+  node tools/i18n.js mkpatch /tmp/empty-dict.json "$D/usr/lib/lua/luci/view/smsforward/smsforward.htm" \
+    /usr/lib/lua/luci/view/smsforward/smsforward.htm patches/smsforward/smsforward.htm.json translations/smsforward/htm-raw.json
+  node tools/i18n.js mkpatch /tmp/empty-dict.json "$D/usr/lib/lua/luci/controller/smsforward.lua" \
+    /usr/lib/lua/luci/controller/smsforward.lua patches/smsforward/smsforward.lua.json translations/smsforward/lua-raw.json
 fi
 # drop empty patches
 for p in patches/*/*.json; do

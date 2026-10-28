@@ -22,13 +22,13 @@ def read(p, mode='rb'):
         return f.read()
 
 
-def overlay_scripts(name):
+def overlay_scripts(name, after=''):
     d = f'/usr/share/hiveton-i18n/{name}'
     return {
         'postinst': '#!/bin/sh\n[ -n "$IPKG_INSTROOT" ] && exit 0\n'
-                    f'ucode {d}/ru-patch.uc apply {d}/patches\n' + CLEAR + 'exit 0\n',
+                    f'ucode {d}/ru-patch.uc apply {d}/patches\n' + CLEAR + after + 'exit 0\n',
         'prerm': '#!/bin/sh\n[ -n "$IPKG_INSTROOT" ] && exit 0\n'
-                 f'ucode {d}/ru-patch.uc restore {d}/patches\n' + CLEAR + 'exit 0\n',
+                 f'ucode {d}/ru-patch.uc restore {d}/patches\n' + CLEAR + after + 'exit 0\n',
     }
 
 
@@ -82,6 +82,14 @@ def main():
         a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
         'Russian translation for the LuCI screensaver / system alerts overlay',
         overlay_files(name, 'patches/overlay'), overlay_scripts(name)))
+
+    # 5. SMS Forward (binary message template + LuCI page)
+    name = 'luci-i18n-smsforward-ru'
+    built.append(mkipk.build(
+        a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
+        'Russian translation for SmsForward (forwarded message template, logs, LuCI page)',
+        overlay_files(name, 'patches/smsforward'),
+        overlay_scripts(name, '[ -x /etc/init.d/smsforward ] && /etc/init.d/smsforward restart >/dev/null 2>&1\n')))
 
     for b in built:
         print(b)

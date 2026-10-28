@@ -1,0 +1,1 @@
+{"target":"/usr/lib/lua/luci/view/smsforward/smsforward.htm","orig_md5":"edf3b290f2a2845e9af55bb8216ed99a","orig_size":39771,"new_md5":"607f3437fdc96264e296a8255488eeaf","ops":[[39420,31,"title: 'Применение настроек...',","title: '正在应用配置...',"],[39516,39,"'Перезапуск службы пересылки SMS',","'系统正在重启短信转发服务',"]]}
