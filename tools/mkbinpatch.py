@@ -5,7 +5,7 @@ usage: tools/mkbinpatch.py <dict.json> <original-binary> <target-path> <out.json
 
 dict.json maps whole NUL-terminated C strings (zh) to replacements (ru).
 A replacement must fit into the original byte length (it is NUL-padded),
-keep the same printf specifiers, and the original must occur exactly once.
+keep the printf specifiers (trailing ones may be dropped), and the original must occur exactly once.
 """
 import hashlib, json, re, sys
 
@@ -21,7 +21,8 @@ for zh, ru in d.items():
         print(f'skip (found {len(occ)}x): {zh!r}'); errors += 1; continue
     if len(rb) > len(zb):
         print(f'too long ({len(rb)} > {len(zb)} bytes): {ru!r}'); errors += 1; continue
-    if spec.findall(zh) != spec.findall(ru):
+    fz, fr = spec.findall(zh), spec.findall(ru)
+    if fr != fz[:len(fr)]:  # dropping trailing specifiers is safe (extra varargs are ignored)
         print(f'format mismatch: {zh!r} -> {ru!r}'); errors += 1; continue
     ops.append([occ[0], len(zb), (rb + b'\0' * (len(zb) - len(rb))).decode('utf-8'), zh])
 ops.sort()

@@ -9,7 +9,7 @@
 | `luci-i18n-modemwebui-ru` | Панель модема на порту `:8001` (Modem WebUI, «Powered by @Snowflakes»): экран загрузки, меню, обзор, сеть, дозвон, APN/PDP, SIM/PIN, привязка к диапазонам и сотам, SMS, AT-терминал, температура модуля, встроенные тексты Ant Design |
 | `luci-i18n-quickstart-ru` | Главная страница LuCI — QuickStart (iStoreOS): карточки, мастера, тест скорости, Wi-Fi, NAS/RAID |
 | `luci-i18n-qmodem-next-ru` | Раздел **Modem** в меню LuCI (QModem Next 3.0.0) |
-| `luci-i18n-overlay-ru` | Заставка при бездействии (часы, CPU, память, диск, модем), всплывающие системные оповещения от `system-monitor` и страница настроек *Система → Заставка* |
+| `luci-i18n-overlay-ru` | Заставка при бездействии (часы, CPU, память, диск, модем), всплывающие системные оповещения (тексты переведены в самой программе `system-monitor`) и страница настроек *Система → Заставка* |
 | `luci-i18n-smsforward-ru` | SmsForward: шаблон пересылаемых SMS («От / Текст / Время / №» вместо «发件人 / 内容 / 时间 / 编号»), история пересылок, журнал службы |
 
 ![Обзор](docs/modemwebui-dashboard.png)
@@ -30,7 +30,7 @@ ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i1
 ```sh
 cd /tmp
 for p in modemwebui-ru_1.2.2 quickstart-ru_1.01.2 qmodem-next-ru_3.0.0 overlay-ru_1.0.0 smsforward-ru_1.0.0; do
-  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-4_all.ipk"
+  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-5_all.ipk"
 done
 opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 ```
@@ -107,8 +107,8 @@ translations/
   quickstart/raw.json          мелкие правки шаблонных строк (пробелы)
   modemwebui/dict.json         китайский → русский для Modem WebUI (null = не трогать)
   modemwebui/loading.json      экран загрузки Modem WebUI
-  overlay/                     заставка: словарь JS, правки страницы настроек и контроллера;
-                               js-raw.json встраивает перевод сообщений system-monitor на лету
+  overlay/                     заставка: словарь JS, правки страницы настроек и контроллера
+  system-monitor/binary.json   строки программы system-monitor (оповещения, время работы, операторы)
 patches/                       сгенерированные байтовые патчи
 files/ru-patch.uc              применение/откат патчей на роутере
   smsforward/binary.json       строки программы smsforward (целиком, с \n)

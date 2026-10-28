@@ -81,7 +81,8 @@ def main():
     built.append(mkipk.build(
         a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
         'Russian translation for the LuCI screensaver / system alerts overlay',
-        overlay_files(name, 'patches/overlay'), overlay_scripts(name)))
+        overlay_files(name, 'patches/overlay'),
+        overlay_scripts(name, '[ -x /etc/init.d/system-monitor ] && /etc/init.d/system-monitor restart >/dev/null 2>&1\n')))
 
     # 5. SMS Forward (binary message template + LuCI page)
     name = 'luci-i18n-smsforward-ru'

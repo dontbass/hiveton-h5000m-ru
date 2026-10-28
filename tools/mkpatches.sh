@@ -7,7 +7,7 @@
 #   <dump-root>/www/luci-static/quickstart/index.js
 # On the router:  tar czf /tmp/src.tar.gz /www/webui/webui000/web /www/luci-static/quickstart \\
 #   /www/luci-static/resources/luci-overlay.js /usr/lib/lua/luci/view/overlay /usr/lib/lua/luci/controller/overlay.lua \\
-#   /usr/bin/smsforward /usr/lib/lua/luci/view/smsforward /usr/lib/lua/luci/controller/smsforward.lua
+#   /usr/bin/system-monitor /usr/bin/smsforward /usr/lib/lua/luci/view/smsforward /usr/lib/lua/luci/controller/smsforward.lua
 set -e
 D="$1"; [ -d "$D" ] || { echo "usage: $0 <dump-root>"; exit 1; }
 cd "$(dirname "$0")/.."
@@ -37,6 +37,8 @@ if [ -f "$O" ]; then
   node tools/i18n.js mkpatch /tmp/empty-dict.json "$D/usr/lib/lua/luci/controller/overlay.lua" \
     /usr/lib/lua/luci/controller/overlay.lua patches/overlay/overlay.lua.json translations/overlay/lua-raw.json
 fi
+[ -f "$D/usr/bin/system-monitor" ] && python3 tools/mkbinpatch.py translations/system-monitor/binary.json \
+  "$D/usr/bin/system-monitor" /usr/bin/system-monitor patches/overlay/system-monitor.bin.json || true
 # SMS Forward (compiled binary + LuCI page)
 if [ -f "$D/usr/bin/smsforward" ]; then
   python3 tools/mkbinpatch.py translations/smsforward/binary.json "$D/usr/bin/smsforward" \
