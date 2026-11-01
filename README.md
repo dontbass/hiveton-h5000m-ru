@@ -59,6 +59,17 @@ opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru luci-i18n-overlay-ru luci-i18n-smsforward-ru
 ```
 
+### Оформление панели модема под тему LuCI
+
+Перевод совместим со скином из темы [404 Mode](https://github.com/dontbass/404-Mode):
+панель на `:8001` перекрашивается под активную тему LuCI (ГОСТ-24, тёмная или светлая)
+и переключается вместе с ней. Скин добавляет в `index.html` панели одну помеченную строку
+и не трогает файлы, которые патчит этот перевод.
+
+```sh
+uclient-fetch -qO /tmp/404.sh https://raw.githubusercontent.com/dontbass/404-Mode/main/install.sh && sh /tmp/404.sh --gost
+```
+
 ## Как это работает
 
 - **QModem** использует стандартный механизм LuCI: в нём английские msgid, поэтому хватает
