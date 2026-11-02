@@ -1,0 +1,1 @@
+{"target": "/usr/bin/homebox", "orig_md5": "1f2262784cf6fadc773b868e523373cb", "orig_size": 6970232, "new_md5": "8148bebb290503cd4e69061928b83e6f", "ops": [[6446112, 456408, {"file": "homebox-web.new.bin"}, {"file": "homebox-web.old.bin"}]]}

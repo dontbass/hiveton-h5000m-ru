@@ -17,10 +17,16 @@ function md5(path) {
 	return m ? m[1] : null;
 }
 
+// op[2] (new) / op[3] (old) are either strings or {file: "name"} blobs stored next to the patch
+let blob_dir = '';
+function blob(v) {
+	return (type(v) == 'object') ? fs.readfile(blob_dir + '/' + v.file) : v;
+}
+
 function apply_ops(data, ops) {
 	let out = [], pos = 0;
 	for (let op in ops) {
-		push(out, substr(data, pos, op[0] - pos), op[2]);
+		push(out, substr(data, pos, op[0] - pos), blob(op[2]));
 		pos = op[0] + op[1];
 	}
 	push(out, substr(data, pos));
@@ -30,8 +36,8 @@ function apply_ops(data, ops) {
 function revert_ops(data, ops) {
 	let out = [], pos = 0, delta = 0;
 	for (let op in ops) {
-		let start = op[0] + delta, newlen = length(op[2]);
-		push(out, substr(data, pos, start - pos), op[3]);
+		let nv = blob(op[2]), start = op[0] + delta, newlen = length(nv);
+		push(out, substr(data, pos, start - pos), blob(op[3]));
 		pos = start + newlen;
 		delta += newlen - op[1];
 	}
@@ -54,6 +60,7 @@ function write_atomic(path, data) {
 
 let mode = ARGV[0] ?? 'status', dir = ARGV[1];
 if (!dir) { warn('usage: ru-patch.uc apply|restore|status <patch-dir>\n'); exit(2); }
+blob_dir = dir;
 
 let files = filter(fs.lsdir(dir) ?? [], f => match(f, /\.json$/));
 for (let pf in sort(files)) {

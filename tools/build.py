@@ -36,7 +36,7 @@ def overlay_files(name, patchdir):
     d = f'/usr/share/hiveton-i18n/{name}'
     files = {f'{d}/ru-patch.uc': (read('files/ru-patch.uc'), 0o755)}
     for fn in sorted(os.listdir(os.path.join(ROOT, patchdir))):
-        if fn.endswith('.json'):
+        if fn.endswith('.json') or fn.endswith('.bin'):
             files[f'{d}/patches/{fn}'] = read(os.path.join(patchdir, fn))
     return files
 
@@ -103,6 +103,18 @@ def main():
             a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
             'Russian translation for the Fan Control page',
             files, overlay_scripts(name)))
+
+    # 7. Homebox (speed test on :3300 embedded in the Go binary + LuCI page)
+    name = 'luci-i18n-homebox-ru'
+    with tempfile.TemporaryDirectory() as td:
+        lmo = os.path.join(td, 'ru.lmo')
+        subprocess.check_call([a.po2lmo, os.path.join(ROOT, 'translations/homebox/ru.po'), lmo])
+        files = overlay_files(name, 'patches/homebox')
+        files['/usr/lib/lua/luci/i18n/homebox.ru.lmo'] = open(lmo, 'rb').read()
+        built.append(mkipk.build(
+            a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
+            'Russian translation for Homebox (speed test web UI and LuCI page)',
+            files, overlay_scripts(name, '[ -x /etc/init.d/homebox ] && /etc/init.d/homebox restart >/dev/null 2>&1\n')))
 
     for b in built:
         print(b)

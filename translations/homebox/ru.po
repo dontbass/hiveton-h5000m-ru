@@ -1,0 +1,31 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+
+msgid "Homebox"
+msgstr "Homebox"
+
+msgid "Homebox is a tool for local network speed testing"
+msgstr "Homebox — тест скорости локальной сети"
+
+msgid "Homebox Status"
+msgstr "Состояние Homebox"
+
+msgid "The Homebox service is running."
+msgstr "Служба Homebox работает."
+
+msgid "The Homebox service is not running."
+msgstr "Служба Homebox не запущена."
+
+msgid "Click to open Homebox"
+msgstr "Открыть Homebox"
+
+msgid "Collecting data..."
+msgstr "Сбор данных..."
+
+msgid "Global Settings"
+msgstr "Глобальные настройки"
+
+msgid "Enable"
+msgstr "Включить"
