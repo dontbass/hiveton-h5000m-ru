@@ -1,0 +1,47 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: ru\n"
+"Project-Id-Version: fancontrol (Hiveton H5000M)\n"
+
+msgid "Fan Control"
+msgstr "Вентилятор"
+
+msgid "Quiet Mode"
+msgstr "Тихий"
+
+msgid "Balanced Mode"
+msgstr "Сбалансированный"
+
+msgid "Performance Mode"
+msgstr "Производительный"
+
+msgid "On"
+msgstr "Включено"
+
+msgid "Off"
+msgstr "Выключено"
+
+msgid "CPU Usage"
+msgstr "Загрузка CPU"
+
+msgid "Memory Usage"
+msgstr "Использование памяти"
+
+msgid "Save and Apply"
+msgstr "Сохранить и применить"
+
+msgid "Fan Speed"
+msgstr "Скорость вентилятора"
+
+msgid "Temperature Trend"
+msgstr "Температура"
+
+msgid "CPU Usage Trend"
+msgstr "Загрузка CPU"
+
+msgid "Memory Usage Trend"
+msgstr "Использование памяти"
+
+msgid "Fan Curve"
+msgstr "Кривая вентилятора"

@@ -1,0 +1,1 @@
+{"target":"/usr/lib/lua/luci/view/fancontrol/main.htm","orig_md5":"6f9efd391a5d85d1f17e4b16bfcca837","orig_size":44017,"new_md5":"7330df200b2c564e4e83dd9165d5e130","ops":[[16095,41,"ctx.fillText('Нет данных...', w / 2, h / 2);","ctx.fillText('No data...', w / 2, h / 2);"]]}

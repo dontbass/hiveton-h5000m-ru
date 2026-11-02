@@ -92,6 +92,18 @@ def main():
         overlay_files(name, 'patches/smsforward'),
         overlay_scripts(name, '[ -x /etc/init.d/smsforward ] && /etc/init.d/smsforward restart >/dev/null 2>&1\n')))
 
+    # 6. Fan Control (fancontrol LuCI page)
+    name = 'luci-i18n-fancontrol-ru'
+    with tempfile.TemporaryDirectory() as td:
+        lmo = os.path.join(td, 'ru.lmo')
+        subprocess.check_call([a.po2lmo, os.path.join(ROOT, 'translations/fancontrol/ru.po'), lmo])
+        files = overlay_files(name, 'patches/fancontrol')
+        files['/usr/lib/lua/luci/i18n/fancontrol-h5000m.ru.lmo'] = open(lmo, 'rb').read()
+        built.append(mkipk.build(
+            a.out, name, f'1.0.0-{REL}', 'ucode, ucode-mod-fs',
+            'Russian translation for the Fan Control page',
+            files, overlay_scripts(name)))
+
     for b in built:
         print(b)
 

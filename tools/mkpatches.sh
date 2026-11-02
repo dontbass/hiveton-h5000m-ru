@@ -13,7 +13,7 @@ D="$1"; [ -d "$D" ] || { echo "usage: $0 <dump-root>"; exit 1; }
 cd "$(dirname "$0")/.."
 [ -d tools/node_modules ] || (cd tools && npm install --silent)
 
-rm -f patches/quickstart/*.json patches/modemwebui/*.json patches/overlay/*.json patches/smsforward/*.json
+rm -f patches/quickstart/*.json patches/modemwebui/*.json patches/overlay/*.json patches/smsforward/*.json patches/fancontrol/*.json
 node tools/i18n.js mkpatch translations/quickstart/hardcoded.json \
   "$D/www/luci-static/quickstart/index.js" /www/luci-static/quickstart/index.js \
   patches/quickstart/index.js.json translations/quickstart/raw.json
@@ -48,6 +48,9 @@ if [ -f "$D/usr/bin/smsforward" ]; then
   node tools/i18n.js mkpatch /tmp/empty-dict.json "$D/usr/lib/lua/luci/controller/smsforward.lua" \
     /usr/lib/lua/luci/controller/smsforward.lua patches/smsforward/smsforward.lua.json translations/smsforward/lua-raw.json
 fi
+[ -f "$D/usr/lib/lua/luci/view/fancontrol/main.htm" ] && node tools/i18n.js mkpatch /tmp/empty-dict.json \
+  "$D/usr/lib/lua/luci/view/fancontrol/main.htm" /usr/lib/lua/luci/view/fancontrol/main.htm \
+  patches/fancontrol/main.htm.json translations/fancontrol/htm-raw.json
 # drop empty patches
 for p in patches/*/*.json; do
   grep -q '"ops":\[\]' "$p" && rm -f "$p"
