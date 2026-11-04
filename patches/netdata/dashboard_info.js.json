@@ -1,0 +1,1 @@
+{"target": "/usr/share/netdata/web/dashboard_info.js", "orig_md5": "85f8e562f12aab395725d4222c602e14", "orig_size": 458512, "new_md5": "c095a08a7f842d1b70ed0327abdd83a4", "ops": [[0, 458512, {"file": "dashboard_info.new.bin"}, {"file": "dashboard_info.old.bin"}]]}

@@ -116,6 +116,13 @@ def main():
             'Russian translation for Homebox (speed test web UI and LuCI page)',
             files, overlay_scripts(name, '[ -x /etc/init.d/homebox ] && /etc/init.d/homebox restart >/dev/null 2>&1\n')))
 
+    # 8. Netdata web UI (Russian UI, English chart help)
+    name = 'netdata-i18n-ru'
+    built.append(mkipk.build(
+        a.out, name, f'1.38.1-{REL}', 'netdata, ucode, ucode-mod-fs',
+        'Russian Netdata dashboard UI (chart help in English) for the H5000M Snowflakes build',
+        overlay_files(name, 'patches/netdata'), overlay_scripts(name)))
+
     for b in built:
         print(b)
 

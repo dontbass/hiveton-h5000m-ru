@@ -26,3 +26,5 @@ ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i1
 **v1.6.0:** новый пакет `luci-i18n-fancontrol-ru` — страница управления вентилятором.
 
 **v1.7.0:** новый пакет `luci-i18n-homebox-ru` — тест скорости Homebox (`:3300`) и его страница в LuCI.
+
+**v1.8.0:** новый пакет `netdata-i18n-ru` — русский интерфейс Netdata (справка к графикам на английском).

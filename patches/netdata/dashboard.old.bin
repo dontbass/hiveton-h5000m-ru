@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<html lang="en">
+<head>
+    <title>Netdata 仪表板</title>
+    <meta name="application-name" content="netdata">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="author" content="costa@tsaousis.gr">
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://cloud.githubusercontent.com/assets/2662304/22945737/e98cd0c6-f2fd-11e6-96f1-5501934b0955.png"/>
+    <meta property="og:url" content="http://my-netdata.io/"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="netdata"/>
+    <meta property="og:title" content="netdata - 实时性能监控，做得正确！"/>
+    <meta property="og:description" content="令人惊叹的实时仪表板，速度极快且极具交互性。零配置，零依赖，零维护。" />
+</head>
+<body>
+
+<div class="container-fluid">
+
+<h1>Netdata 自定义仪表板 <div data-netdata="system.cpu" data-chart-library="sparkline" data-height="30" data-after="-600" data-sparkline-linecolor="#888"></div></h1>
+
+这是构建自定义仪表板的模板。要构建仪表板，您只需这样做：
+
+<pre>
+&lt;!DOCTYPE html>
+&lt;html lang="en">
+&lt;head>
+    &lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    &lt;meta charset="utf-8">
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+    &lt;meta name="apple-mobile-web-app-capable" content="yes">
+    &lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+&lt;/head>
+&lt;body>
+    &lt;div data-netdata="system.processes"
+        data-chart-library="dygraph"
+        data-width="600"
+        data-height="200"
+        data-after="-600"
+        >&lt;/div>
+&lt;/body>
+&lt;script type="text/javascript" src="http://netdata.server:19999/dashboard.js">&lt;/script>
+&lt;/html>
+</pre>
+
+<ul>
+    <li>您可以在任何地方托管仪表板。</li>
+    <li>您可以添加任意数量的图表。</li>
+    <li>您可以使用来自多个不同 netdata 服务器的图表（为每个图表添加 <pre>data-host="http://another.netdata.server:19999/"</pre>）。</li>
+    <li>您可以在同一页面上使用不同的图表库：<b>peity</b>、<b>sparkline</b>、<b>dygraph</b>、<b>google</b></li>
+    <li>您可以根据自己的偏好自定义每个图表。对于每个图表库，它们的大多数属性都可以在 <b>data-</b> 属性中指定。</li>
+    <li>每个图表可以有自己的持续时间 - 通过 <b>data-after</b> 属性控制，以提供那么多秒的数据。</li>
+    <li>根据图表的宽度和 <b>data-after</b> 属性，netdata 将在需要更新时自动刷新图表。例如，宽度为 600 像素，显示 -600 秒的数据，使用每个点需要 3 像素的图表库，将产生每 3 秒更新一次的图表。</li>
+</ul>
+
+
+<hr>
+<h1>Sparkline 图表</h1>
+Sparkline 图表支持 'NULL' 值，因此图表可以指示值缺失。
+Sparkline 图表拉伸值以更详细地显示值之间的变化。
+它们还支持鼠标悬停。
+<br/>
+<b>Sparklines 非常棒</b>。您可以在文本中内嵌图表。例如这个
+    <div    data-netdata="system.cpu"
+            data-chart-library="sparkline"
+            data-width="5%"
+            data-height="20"
+            data-after="-30"
+            ></div> 是我当前的 CPU 使用率（最近 30 秒），
+    而这个
+    <div    data-netdata="netdata.net"
+            data-dimensions="out"
+            data-chart-library="sparkline"
+            data-width="10%"
+            data-height="20"
+            data-after="-60"
+            ></div> 是我的 netdata 服务器当前传输的带宽（最近一分钟）
+    并且这个
+    <div    data-netdata="netdata.requests"
+            data-chart-library="sparkline"
+            data-width="20%"
+            data-height="20"
+            data-after="-180"
+            ></div> 是它服务的请求数/秒（最近 3 分钟）。
+
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="sparkline"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time101"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time101">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="sparkline"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time102"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time102">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="sparkline"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time103"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time103">X</span> 毫秒</small>
+</div>
+
+
+
+<hr>
+<h1>Peity 图表</h1>
+Peity 图表不支持 'NULL' 值，因此图表无法指示值缺失。
+Peity 图表不能在图表上显示多个维度 - 因此 netdata 将使用 'min2max' 来显示
+所有维度的总和。
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="peity"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time001"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time001">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="peity"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time002"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time002">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="peity"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time003"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time003">X</span> 毫秒</small>
+</div>
+
+
+
+
+<hr>
+<h1>Dygraph 图表</h1>
+能够绘制完整图表（不仅仅是迷你图）的最快图表引擎。
+图表可缩放（拖动其内容以平移，使用鼠标滚轮配合 shift 来放大或缩小，双击以重置）。
+<b>Netdata 魔法！</b>在您的网页上显示实时图表！
+<br/>
+使用 dygraphs 的迷你图
+    <div data-netdata="system.processes"
+        data-chart-library="dygraph"
+        data-dygraph-theme="sparkline"
+        data-legend="no"
+        data-width="15%"
+        data-height="20"
+        data-after="-300"
+        ></div>
+    也是可能的！这个
+    <div data-netdata="system.net"
+        data-chart-library="dygraph"
+        data-dygraph-theme="sparkline"
+        data-legend="no"
+        data-width="15%"
+        data-height="20"
+        data-after="-300"
+        ></div>
+    是面积图，而这个
+    <div data-netdata="system.cpu"
+        data-chart-library="dygraph"
+        data-dygraph-theme="sparkline"
+        data-legend="no"
+        data-width="15%"
+        data-height="20"
+        data-after="-300"
+        ></div> 是堆叠面积图！
+
+
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="dygraph"
+        data-dygraph-theme="sparkline"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time501"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time501">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="dygraph"
+        data-dygraph-theme="sparkline"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time502"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time502">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="dygraph"
+        data-dygraph-theme="sparkline"
+        data-width="100%"
+        data-height="30"
+        data-after="-300"
+        data-dt-element-name="time503"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time503">X</span> 毫秒</small>
+</div>
+
+
+
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time201"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time201">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time202"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time202">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time203"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time203">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.io"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time204"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time204">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="apps.cpu"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time205"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time205">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="netdata.net"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time206"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time206">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="netdata.server_cpu"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time207"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time207">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="netdata.requests"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time208"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time208">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="net.gstag0"
+        data-chart-library="dygraph"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time209"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time209">X</span> 毫秒</small>
+</div>
+
+
+
+<hr>
+<h1>EasyPieChart</h1>
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.processes"
+            data-chart-library="easypiechart"
+            data-width="200"
+            data-height="200"
+            data-after="-300"
+            data-points="300"
+            data-dt-element-name="time601"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time601">X</span> 毫秒</small>
+    </div>
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.processes"
+            data-chart-library="easypiechart"
+            data-width="150"
+            data-height="150"
+            data-after="-300"
+            data-points="150"
+            data-dt-element-name="time601a"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time601a">X</span> 毫秒</small>
+    </div>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.net"
+            data-chart-library="easypiechart"
+            data-width="200"
+            data-height="200"
+            data-after="-300"
+            data-points="300"
+            data-dt-element-name="time602"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time602">X</span> 毫秒</small>
+    </div>
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.net"
+            data-chart-library="easypiechart"
+            data-width="100"
+            data-height="100"
+            data-after="-300"
+            data-points="150"
+            data-dt-element-name="time602a"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time602a">X</span> 毫秒</small>
+    </div>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.cpu"
+            data-chart-library="easypiechart"
+            data-width="200"
+            data-height="200"
+            data-after="-300"
+            data-points="300"
+            data-dt-element-name="time603"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time603">X</span> 毫秒</small>
+    </div>
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.cpu"
+            data-chart-library="easypiechart"
+            data-width="75"
+            data-height="75"
+            data-after="-300"
+            data-points="150"
+            data-dt-element-name="time603a"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time603a">X</span> 毫秒</small>
+    </div>
+</div>
+
+
+<hr>
+<h1>Gauge.js</h1>
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.processes"
+            data-chart-library="gauge"
+            data-width="250"
+            data-height="200"
+            data-after="-300"
+            data-points="300"
+            data-dt-element-name="time701"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time701">X</span> 毫秒</small>
+    </div>
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.processes"
+            data-chart-library="gauge"
+            data-width="125"
+            data-height="100"
+            data-after="-300"
+            data-points="150"
+            data-dt-element-name="time701a"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time701a">X</span> 毫秒</small>
+    </div>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.net"
+            data-chart-library="gauge"
+            data-width="250"
+            data-height="200"
+            data-after="-300"
+            data-points="300"
+            data-dt-element-name="time702"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time702">X</span> 毫秒</small>
+    </div>
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.net"
+            data-chart-library="gauge"
+            data-width="125"
+            data-height="100"
+            data-after="-300"
+            data-points="150"
+            data-dt-element-name="time702a"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time702a">X</span> 毫秒</small>
+    </div>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.cpu"
+            data-chart-library="gauge"
+            data-width="250"
+            data-height="200"
+            data-after="-300"
+            data-points="300"
+            data-dt-element-name="time703"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time703">X</span> 毫秒</small>
+    </div>
+    <div style="display: inline-block; position: relative;">
+        <div data-netdata="system.cpu"
+            data-chart-library="gauge"
+            data-width="125"
+            data-height="100"
+            data-after="-300"
+            data-points="150"
+            data-dt-element-name="time703a"
+            ></div>
+        <br/>
+        <small>渲染耗时 <span id="time703a">X</span> 毫秒</small>
+    </div>
+</div>
+
+
+<hr>
+<h1>Google 图表</h1>
+Netdata 最初是使用 Google Charts 开发的。
+Netdata 是一个完整的 Google Visualization API 提供者。
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="google"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time301"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time301">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="google"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time302"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time302">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="google"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time303"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time303">X</span> 毫秒</small>
+</div>
+
+<!--
+    
+<hr>
+<h1>Morris 图表</h1>
+不幸的是，Morris Charts 非常慢。在这里我们强制它们降低细节以获得可接受的结果。
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="morris"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time401"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time401">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="morris"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time402"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time402">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="morris"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time403"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time403">X</span> 毫秒</small>
+</div>
+
+
+<hr>
+<h1>C3 图表</h1>
+C3 图表在大规模使用时不可用。它们存在以下问题：
+<ul>
+ <li>过度使用过渡效果（使用 D3 而不是 CSS 实现，意味着它们是 javascript 渲染的）且无法禁用 - 甚至不透明度都在 javascript 库中硬编码</li>
+ <li>渲染使用 <code>SVG</code> 而不是 <code>canvas</code>，因此它们为每个点使用 DOM 元素，如果绘制超过 500 个点就变得无用</li>
+ <li>缺少 <code>raw</code> 数据格式，因此每次更新图表时都需要在 javascript 中进行数据转换</li>
+ <li>缺少 <code>stacked</code> 堆叠图表支持</li>
+</ul>
+因此，为了避免图表闪烁，我们在每次更新时销毁并重新创建图表。此外，由于它们使用 javascript 操作数据，我们被迫降低它们渲染的细节以获得可接受的速度。
+<br/>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.processes"
+        data-chart-library="c3"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time801"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time801">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.net"
+        data-chart-library="c3"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time802"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time802">X</span> 毫秒</small>
+</div>
+<div style="width: 33%; display: inline-block;">
+    <div data-netdata="system.cpu"
+        data-chart-library="c3"
+        data-width="100%"
+        data-height="200"
+        data-after="-300"
+        data-dt-element-name="time803"
+        ></div>
+    <br/>
+    <small>渲染耗时 <span id="time803">X</span> 毫秒</small>
+</div>
+
+-->
+
+    <hr>
+    <h1>d3pie 图表</h1>
+    <div style="width: 33%; display: inline-block;">
+        <div data-netdata="apps.cpu"
+             data-chart-library="d3pie"
+             data-d3pie-pieinnerradius="70%"
+             data-d3pie-pieouterradius="90%"
+             data-width="100%"
+             data-height="300px"
+             data-after="-60"
+             data-points="60"
+             data-dt-element-name="time901"
+        ></div>
+        <br/>
+        <small>渲染耗时 <span id="time901">X</span> 毫秒</small>
+    </div>
+
+    <div style="width: 33%; display: inline-block;">
+        <div data-netdata="system.cpu"
+             data-chart-library="d3pie"
+             data-width="100%"
+             data-height="300px"
+             data-after="-60"
+             data-points="60"
+             data-dt-element-name="time902"
+        ></div>
+        <br/>
+        <small>渲染耗时 <span id="time902">X</span> 毫秒</small>
+    </div>
+
+    <div style="width: 33%; display: inline-block;">
+        <div data-netdata="apps.cpu"
+             data-width="100%"
+             data-height="300px"
+             data-after="-60"
+             data-points="60"
+             data-debug="false"
+             data-decimal-digits="0"
+             data-dt-element-name="time903"
+        ></div>
+        <br/>
+        <small>渲染耗时 <span id="time903">X</span> 毫秒</small>
+    </div>
+</div> <!-- 1st container -->
+</body>
+</html>
+
+<!-- 您可以通过取消注释来全局设置 netdata 服务器 -->
+<!-- 您也可以为每个图表指定不同的服务器，使用属性：data-host="http://netdata.server:19999" -->
+<!-- <script> netdataServer = "http://box:19999"; </script> -->
+
+<!-- 加载仪表板管理器 - 它会完成其余工作 -->
+<!-- <script>var netdataTheme = 'slate';</script> -->
+<script type="text/javascript" src="dashboard.js?v20190902-0"></script>

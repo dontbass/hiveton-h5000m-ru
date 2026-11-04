@@ -13,6 +13,7 @@
 | `luci-i18n-smsforward-ru` | SmsForward: шаблон пересылаемых SMS («От / Текст / Время / №» вместо «发件人 / 内容 / 时间 / 编号»), история пересылок, журнал службы |
 | `luci-i18n-fancontrol-ru` | Страница *Система → Fan Control*: режимы, скорость вентилятора, графики температуры/CPU/памяти, кривая вентилятора |
 | `luci-i18n-homebox-ru` | Homebox: тест скорости на `:3300` (режимы, настройки, Пинг/Загрузка/Отдача) и страница в LuCI |
+| `netdata-i18n-ru` | Панель Netdata (`:19999`): меню, настройки, названия графиков и единицы на русском; подробная справка к графикам — на английском (оригинал Netdata 1.38.1) |
 
 ![Обзор](docs/modemwebui-dashboard.png)
 
@@ -32,9 +33,11 @@ ssh root@192.168.88.1 'opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i1
 ```sh
 cd /tmp
 for p in modemwebui-ru_1.2.2 quickstart-ru_1.01.2 qmodem-next-ru_3.0.0 overlay-ru_1.0.0 smsforward-ru_1.0.0 fancontrol-ru_1.0.0 homebox-ru_1.0.0; do
-  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-8_all.ipk"
+  wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/luci-i18n-${p}-9_all.ipk"
 done
-opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
+# Netdata (если установлен):
+wget -q "https://github.com/dontbass/hiveton-h5000m-ru/releases/latest/download/netdata-i18n-ru_1.38.1-9_all.ipk"
+opkg install /tmp/*-i18n-*-ru_*.ipk && rm /tmp/*-i18n-*-ru_*.ipk
 ```
 
 Язык LuCI должен быть русским: *Система → Система → Язык и стиль*.
@@ -58,7 +61,7 @@ opkg install /tmp/luci-i18n-*-ru_*.ipk && rm /tmp/luci-i18n-*-ru_*.ipk
 Удаление (оригинальные файлы восстанавливаются автоматически):
 
 ```sh
-opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru luci-i18n-overlay-ru luci-i18n-smsforward-ru luci-i18n-fancontrol-ru luci-i18n-homebox-ru
+opkg remove luci-i18n-modemwebui-ru luci-i18n-quickstart-ru luci-i18n-qmodem-next-ru luci-i18n-overlay-ru luci-i18n-smsforward-ru luci-i18n-fancontrol-ru luci-i18n-homebox-ru netdata-i18n-ru
 ```
 
 ### Оформление панели модема под тему LuCI
@@ -124,6 +127,7 @@ translations/
   system-monitor/binary.json   строки программы system-monitor (оповещения, время работы, операторы)
 patches/                       сгенерированные байтовые патчи
 files/ru-patch.uc              применение/откат патчей на роутере
+  netdata/                     панель Netdata: строки интерфейса, названия графиков, меню (tools/mknetdata.py)
   homebox/                     тест скорости (см. tools/mkhomebox.md) и страница LuCI
   fancontrol/ru.po             страница управления вентилятором
   smsforward/binary.json       строки программы smsforward (целиком, с \n)

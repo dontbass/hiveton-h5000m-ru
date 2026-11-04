@@ -1,0 +1,79 @@
+1-Wire Sensors	Датчики 1-Wire
+ACLK Test Generator	Тестовый генератор ACLK
+AD Certification Service	Служба сертификатов AD
+AD Federation Service	Служба федерации AD
+AM2320 Sensor	Датчик AM2320
+Access Points	Точки доступа
+Active Directory	Active Directory
+Alarms	Оповещения
+Anomalies	Аномалии
+Anomaly Detection	Обнаружение аномалий
+Applications	Приложения
+CPUs	Процессоры
+DDoS protection	Защита от DDoS
+Disks	Диски
+Example Charts	Примеры графиков
+Filesystem	Файловая система
+Firewall (ipfw)	Брандмауэр (ipfw)
+Firewall (netfilter)	Брандмауэр (netfilter)
+HDD Temp	Температура HDD
+Http Check	Проверка HTTP
+IP Virtual Server	IP Virtual Server
+IPv4 Networking	Сеть IPv4
+IPv6 Networking	Сеть IPv6
+Infiniband ports	Порты Infiniband
+MD arrays	Массивы MD
+Memory	Память
+Mount Points	Точки монтирования
+NFS Client	Клиент NFS
+NFS Server	Сервер NFS
+Netdata Monitoring	Мониторинг Netdata
+Network Interfaces	Сетевые интерфейсы
+Networking Stack	Сетевой стек
+Perf Counters	Счётчики perf
+Port Check	Проверка портов
+Power Supply	Питание
+Quality of Service	Качество обслуживания (QoS)
+SCTP Networking	Сеть SCTP
+Sensors	Датчики
+Squid log	Журнал Squid
+System Overview	Обзор системы
+User Groups	Группы пользователей
+Users	Пользователи
+Wireless Interfaces	Беспроводные интерфейсы
+ZFS Cache	Кэш ZFS
+ZFS pools	Пулы ZFS
+bandwidth	трафик
+bandwidth accounting	учёт трафика
+btrfs latency (eBPF)	задержки btrfs (eBPF)
+cache	кэш
+clients	клиенты
+connection tracker	отслеживание соединений
+db activity	активность БД
+deduper (ksm)	дедупликация (ksm)
+dynamic rules	динамические правила
+erlang statistics	статистика erlang
+ext4 latency (eBPF)	задержки ext4 (eBPF)
+file access (eBPF)	доступ к файлам (eBPF)
+hierarchy	иерархия
+http traffic breakdown	разбивка HTTP-трафика
+kernel functions (eBPF)	функции ядра (eBPF)
+memory statistics	статистика памяти
+network	сеть
+network (eBPF)	сеть (eBPF)
+nfs latency (eBPF)	задержки nfs (eBPF)
+pache cache (eBPF)	страничный кэш (eBPF)
+page cache (eBPF)	страничный кэш (eBPF)
+peers	узлы
+per db statistics	статистика по БД
+requests	запросы
+responses	ответы
+server operations	операции сервера
+system	система
+systemd Services	Службы systemd
+systemd units	Юниты systemd
+timings	тайминги
+transport	транспорт
+vfs (eBPF)	vfs (eBPF)
+xfs latency (eBPF)	задержки xfs (eBPF)
+zfs latency (eBPF)	задержки zfs (eBPF)
